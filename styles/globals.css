@@ -7,6 +7,7 @@ body {
 }
 .colors{
   /* #9b0000; */
+  /* light green: #009B9B #009B00 */
   color: #15255b
 }
 
@@ -27,7 +28,21 @@ a {
   transition-timing-function: ease-in-out;
   color: #9b0000;
 }
+.active .line{
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  animation-delay: 0.3s;
+  animation-name: fadeInLeft;
+}
 
+.image{
+  background-image: url('/public/img-1.jpg');
+  min-height: 500px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 
 @tailwind base;
 @tailwind components;
