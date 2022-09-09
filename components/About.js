@@ -11,6 +11,7 @@ import 'owl.carousel/dist/assets/owl.theme.default.css';
 import Image from 'next/image';
 import 'animate.css';
 import Navbar from './Navbar';
+import {FiYoutube , FiFacebook} from 'react-icons/fi'
 
 
 
@@ -20,7 +21,7 @@ export default function About() {
     items: 1,
     autoplay: false,
     nav: true,
-    mousedrag: false,
+    mouseDrag: false,
     dots: false,
     navText : [
       "<p class='bg-[rgba(0,0,0,1)] rounded-sm font-[700] text-[20px] m-[5px] p-[6px]  text-white absolute top-[50%] left-0' aria-hidden='true'>&#60;</p>",
@@ -47,7 +48,12 @@ export default function About() {
           </Owl>
           <div className='bg-[#9b0000] h-[90px] w-[100%] flex flex-row justify-around items-center '>
            <div className='text-white'>Join Rev David Akanwa</div>
-           <div className='text-white'>social media icons</div>
+           <div className='text-white'>
+            <div className='flex flex-row items-center justify-around'>
+              <FiYoutube className='text-[30px]' />
+              <FiFacebook className='text-[30px]' />
+            </div>
+           </div>
         </div>
     </div>
   )

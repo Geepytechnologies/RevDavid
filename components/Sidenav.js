@@ -10,35 +10,35 @@ export default function Sidenav() {
   return (
     <div className=''>
         <div className='text-white flex flex-col justify-around w-[100vw]'>
-        <div className='flex ml-[4px] flex-row items-center cursor-pointer w-[70%] hover:scale-[1.02]  py-[5px] rounded-r-lg my-[10px]'>
-            <div className='mr-[5px]'><FaHome style={{fill: 'hsl(34,100%,47%)'}}/></div>
-            <div><Link href='/'><a>Home</a></Link></div>
+            <div className='flex ml-[4px] flex-row items-center cursor-pointer w-[70%] hover:scale-[1.02]  py-[5px] rounded-r-lg my-[10px]'>
+                <div className='mr-[5px]'><FaHome style={{fill: 'hsl(34,100%,47%)'}}/></div>
+                <div><Link href='/'><a>Home</a></Link></div>
+            </div>
+            <div className='flex ml-[4px] flex-row items-center cursor-pointer w-[70%] hover:scale-[1.02]  py-[5px] rounded-r-lg my-[10px]'>
+                <div className='mr-[5px]'><MdMiscellaneousServices style={{fill: 'hsl(34,100%,47%)'}}/></div>
+                <div className=''><Link href='/courses'><a>About</a></Link></div>
+            </div>
+            <div className='flex ml-[4px] flex-row items-center cursor-pointer w-[70%] hover:scale-[1.02] py-[5px] rounded-r-lg my-[10px]'>
+                <div className='mr-[5px]'><AiFillContacts style={{fill: 'hsl(34,100%,47%)'}}/></div>
+                <div><Link href='/contact'><a>Media</a></Link></div>
+            </div>
+            <div className='flex ml-[4px] flex-row items-center cursor-pointer w-[70%] hover:scale-[1.02] py-[5px] rounded-r-lg my-[10px]'>
+                <div className='mr-[5px]'><IoIosContacts style={{fill: 'hsl(34,100%,47%)'}}/></div>
+                <div className=''><Link href='/about'><a>Events</a></Link></div>
+            </div>
+            <div className='flex ml-[4px] flex-row items-center cursor-pointer w-[70%] hover:scale-[1.02]  py-[5px] rounded-r-lg my-[10px]'>
+                <div className='mr-[5px]'><FaBloggerB style={{fill: 'hsl(34,100%,47%)'}}/></div>
+                <div><Link href='/blog'><a>Blog</a></Link></div>
+            </div>
+            <div className='flex ml-[4px] flex-row items-center cursor-pointer w-[70%] hover:scale-[1.02]  py-[5px] rounded-r-lg my-[10px]'>
+                <div className='mr-[5px]'><FaBloggerB style={{fill: 'hsl(34,100%,47%)'}}/></div>
+                <div><Link href='/blog'><a>Donate</a></Link></div>
+            </div>
+            <div className='flex ml-[4px] flex-row items-center cursor-pointer w-[70%] hover:scale-[1.02]  py-[5px] rounded-r-lg my-[10px]'>
+                <div className='mr-[5px]'><FaBloggerB style={{fill: 'hsl(34,100%,47%)'}}/></div>
+                <div><Link href='/blog'><a>Contact</a></Link></div>
+            </div>
         </div>
-        <div className='flex ml-[4px] flex-row items-center cursor-pointer w-[70%] hover:scale-[1.02]  py-[5px] rounded-r-lg my-[10px]'>
-            <div className='mr-[5px]'><MdMiscellaneousServices style={{fill: 'hsl(34,100%,47%)'}}/></div>
-            <div className=''><Link href='/courses'><a>About</a></Link></div>
-        </div>
-        <div className='flex ml-[4px] flex-row items-center cursor-pointer w-[70%] hover:scale-[1.02] py-[5px] rounded-r-lg my-[10px]'>
-            <div className='mr-[5px]'><AiFillContacts style={{fill: 'hsl(34,100%,47%)'}}/></div>
-            <div><Link href='/contact'><a>Media</a></Link></div>
-        </div>
-        <div className='flex ml-[4px] flex-row items-center cursor-pointer w-[70%] hover:scale-[1.02] py-[5px] rounded-r-lg my-[10px]'>
-            <div className='mr-[5px]'><IoIosContacts style={{fill: 'hsl(34,100%,47%)'}}/></div>
-            <div className=''><Link href='/about'><a>Events</a></Link></div>
-        </div>
-        <div className='flex ml-[4px] flex-row items-center cursor-pointer w-[70%] hover:scale-[1.02]  py-[5px] rounded-r-lg my-[10px]'>
-            <div className='mr-[5px]'><FaBloggerB style={{fill: 'hsl(34,100%,47%)'}}/></div>
-            <div><Link href='/blog'><a>Blog</a></Link></div>
-        </div>
-        <div className='flex ml-[4px] flex-row items-center cursor-pointer w-[70%] hover:scale-[1.02]  py-[5px] rounded-r-lg my-[10px]'>
-            <div className='mr-[5px]'><FaBloggerB style={{fill: 'hsl(34,100%,47%)'}}/></div>
-            <div><Link href='/blog'><a>Donate</a></Link></div>
-        </div>
-        <div className='flex ml-[4px] flex-row items-center cursor-pointer w-[70%] hover:scale-[1.02]  py-[5px] rounded-r-lg my-[10px]'>
-            <div className='mr-[5px]'><FaBloggerB style={{fill: 'hsl(34,100%,47%)'}}/></div>
-            <div><Link href='/blog'><a>Contact</a></Link></div>
-        </div>
-    </div>
         <div>
             <div className='w-[100%] p-[5px] flex items-center justify-center'>
                 <ul className='flex justify-around pr-[20px] w-[80%]'>
