@@ -111,20 +111,20 @@ export default function Navbar(props) {
                 <div className='w-[70%] p-[5px]'>
                 <ul className='flex justify-between pr-[20px]'>
                     <li className='inline'>
-                        <Link href='https://twitter.com/XYZ_ACADEMY1?t=Ag7TKGl4s1wzijAQhPtYoA&s=09' target='_blank' rel='noreferrer'><a><FaTwitter style={{fill: '#15255b'}} /></a></Link>
+                        <Link href='https://twitter.com/XYZ_ACADEMY1?t=Ag7TKGl4s1wzijAQhPtYoA&s=09' target='_blank' rel='noreferrer'><a><FaTwitter style={{fill: '#bfccd4'}} /></a></Link>
                     </li>
                     
                     <li className='inline'>
-                        <Link href='/' target='_self' rel='noreferrer'><a><FaTelegramPlane style={{fill: '#15255b'}} /></a></Link>
+                        <Link href='/' target='_self' rel='noreferrer'><a><FaTelegramPlane style={{fill: '#bfccd4'}} /></a></Link>
                     </li>
                     <li className='inline'>
-                        <Link href='/' target='_self' rel='noreferrer'><a><FaFacebook style={{fill: '#15255b'}}/></a></Link>
+                        <Link href='/' target='_self' rel='noreferrer'><a><FaFacebook style={{fill: '#bfccd4'}}/></a></Link>
                     </li>
                     <li className='inline'>
-                        <Link href='https://instagram.com/officialxyzacademy?igshid=YmMyMTA2M2Y=' target='_blank' rel='noreferrer'><a><FaInstagram style={{fill: '#15255b'}}/></a></Link>
+                        <Link href='https://instagram.com/officialxyzacademy?igshid=YmMyMTA2M2Y=' target='_blank' rel='noreferrer'><a><FaInstagram style={{fill: '#bfccd4'}}/></a></Link>
                     </li>
                     <li className='inline'>
-                        <Link href='https://www.linkedin.com/in/xyz-academy-894959242' target='_blank' rel='noreferrer'><a><FaLinkedin style={{fill: '#15255b'}}/></a></Link>
+                        <Link href='https://www.linkedin.com/in/xyz-academy-894959242' target='_blank' rel='noreferrer'><a><FaLinkedin style={{fill: '#bfccd4'}}/></a></Link>
                     </li>
                 </ul>
                 </div>
@@ -142,7 +142,7 @@ export default function Navbar(props) {
         <div ref={side} className='w-[70vw] fixed bg-[#15255b]  border-none z-[100] top-[90px] text-white right-[0px] overflow-hidden absolute sidenavglass max-h-[0px] h-[100vh] md:!hidden transition-[max-height] duration-500 ease-in-out'><Sidenav /></div>
     </div>
     {/* solid navbar */}
-    <div ref={solidnav} className='text-white w-[100%] border-b shadow-[0_7px_60px_-15px_rgba(0,0,0,0.3)] border-b-[#f7f7f7] h-[110px] flex items-center bg-[#9b0000] hidden sticky top-0 z-[100]'>
+    <div ref={solidnav} className='text-white w-[100%] border-b shadow-[0_7px_60px_-15px_rgba(0,0,0,0.3)] border-b-[#f7f7f7] h-[110px] flex items-center bg-[#9b0000] opacity-[0.8] hidden sticky top-0 z-[100]'>
         {/* logo section */}
         <div onClick={()=>{router.push('/')}} className='flex items-center basis-[50%] sm:basis-[50%] md:basis-[30%] lg:[25%]'>
               <p className='font-allura font-[700] text-[25px] text-[#bfccd4]'>Rev David Akanwa</p>
@@ -206,7 +206,6 @@ export default function Navbar(props) {
         {/* end of menu icon */}
         <div ref={side2} className='w-[70vw] fixed bg-[#15255b]  border-none z-[100] top-[110px] text-white right-[0px] overflow-hidden absolute sidenavglass max-h-[0px] h-[100vh] md:!hidden transition-[max-height] duration-500 ease-in-out'><Sidenav /></div>
     </div>
-    <About />
     </>
   )
 }

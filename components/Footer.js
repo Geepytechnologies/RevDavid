@@ -3,6 +3,7 @@ import {FaTwitter, FaFacebook, FaInstagram, FaLinkedin, FaTelegramPlane, FaBars}
 import {AiFillHeart, AiOutlineCopyright} from 'react-icons/ai'
 import Image from 'next/image';
 import Link from 'next/link';
+import { IoMdArrowDropdownCircle } from 'react-icons/io';
 
 
 export default function Footer() {
@@ -10,9 +11,48 @@ export default function Footer() {
     <div className='h-[auto] pb-[50px] sm:pb-[0px] flex flex-col items-center justify-center bg-[#15255b] '>
         <div className='w-[60%] flex flex-col items-center justify-center'>
             <div className='flex w-[100%] items-center justify-center sm:justify-center'>
-                <div onClick={()=> router.push('/')} className='h-[200px] w-[200px] relative cursor-pointer'>
-                {/* <Image src={null} alt='logo' layout='fill' objectFit='contain'/> */}
+                <div onClick={()=>{router.push('/')}} className='flex items-center basis-[50%] sm:basis-[50%] md:basis-[30%] lg:[25%]'>
+                    <p className='font-allura font-[700] text-[25px] text-[#9b0000]'>Rev David Akanwa</p>
                 </div>
+            </div>
+        </div>
+        {/* Navigation Links */}
+        <div className='flex flex-col md:flex-row items-center justify-around w-[100%] '>
+            {/* first row */}
+            <div>
+                <div className='flex flex-row items-center'>
+                    <p className='mr-[8px]'>Quick Links</p>
+                    <IoMdArrowDropdownCircle className='slide-bottom' />
+                </div>
+              <ul className='mylist'>
+                <li>Mollit dolore velit fugiat sit magna esse mollit in aute.</li>
+                <li>Mollit dolore velit fugiat sit magna esse mollit in aute.</li>
+                <li>Mollit dolore velit fugiat sit magna esse mollit in aute.</li>
+              </ul>
+            </div>
+            {/* second row */}
+            <div>
+                <div className='flex flex-row items-center'>
+                    <p className='mr-[8px]'>Media</p>
+                    <IoMdArrowDropdownCircle className='slide-bottom' />
+                </div>                
+                <ul className='mylist'>
+                    <li>Mollit dolore velit fugiat sit magna esse mollit in aute.</li>
+                    <li>Mollit dolore velit fugiat sit magna esse mollit in aute.</li>
+                    <li>Mollit dolore velit fugiat sit magna esse mollit in aute.</li>
+                </ul>
+            </div>
+            {/* third row */}
+            <div>
+                <div className='flex flex-row items-center'>
+                    <p className='mr-[8px]'>Contact</p>
+                    <IoMdArrowDropdownCircle className='slide-bottom' />
+                </div>                
+                <ul className='mylist'>
+                    <li>Mollit dolore velit fugiat sit magna esse mollit in aute.</li>
+                    <li>Mollit dolore velit fugiat sit magna esse mollit in aute.</li>
+                    <li>Mollit dolore velit fugiat sit magna esse mollit in aute.</li>
+                </ul>
             </div>
         </div>
         <div className='w-[100%] items-center justify-center flex'>

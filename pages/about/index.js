@@ -8,6 +8,38 @@ export default function Index() {
     <div>
        <Header />
        <Navbar />
+       <p>g</p>
+       <p>g</p>
+       <p>g</p>
+       <p>g</p>
+       <p>g</p>
+       <p>g</p>
+       <p>g</p>
+       <p>g</p>
+       <p>g</p>
+       <p>g</p>
+       <p>g</p>
+       <p>g</p>
+       <p>g</p>
+       <p>g</p>
+       <p>g</p>
+       <p>g</p>
+       <p>g</p>
+       <p>g</p>
+       <p>g</p>
+       <p>g</p>
+       <p>g</p>
+       <p>g</p>
+       <p>g</p>
+       <p>g</p>
+       <p>g</p>
+       <p>g</p>
+       <p>g</p>
+       <p>g</p>
+       <p>g</p>
+       <p>g</p>
+       <p>g</p>
+       <p>g</p>
        <Footer />
     </div>
   )

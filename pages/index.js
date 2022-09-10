@@ -15,6 +15,7 @@ export default function Home() {
     <div className={styles.container}>
       <Header />
       <Navbar />
+      <About />
       <Theman />
       <Mandate />
       <Parallax />
