@@ -4,6 +4,7 @@ import {AiFillHeart, AiOutlineCopyright} from 'react-icons/ai'
 import Image from 'next/image';
 import Link from 'next/link';
 import { IoMdArrowDropdownCircle } from 'react-icons/io';
+import 'animate.css';
 
 
 export default function Footer() {
@@ -20,38 +21,38 @@ export default function Footer() {
         <div className='flex flex-col md:flex-row items-center justify-around w-[100%] '>
             {/* first row */}
             <div>
-                <div className='flex flex-row items-center'>
-                    <p className='mr-[8px]'>Quick Links</p>
-                    <IoMdArrowDropdownCircle className='slide-bottom' />
+                <div className='flex flex-row items-center animate__animated animate__bounce animate__infinite	infinite'>
+                    <p className='mr-[8px] text-[#ffd200] '>Quick Links</p>
+                    <IoMdArrowDropdownCircle className='animate__animated animate__bounce text-[#ffd200]' />
                 </div>
               <ul className='mylist'>
-                <li>Mollit dolore velit fugiat sit magna esse mollit in aute.</li>
-                <li>Mollit dolore velit fugiat sit magna esse mollit in aute.</li>
-                <li>Mollit dolore velit fugiat sit magna esse mollit in aute.</li>
+                <li>Mission</li>
+                <li>Blog</li>
+                <li>Intimate Vessels Church</li>
               </ul>
             </div>
             {/* second row */}
             <div>
                 <div className='flex flex-row items-center'>
-                    <p className='mr-[8px]'>Media</p>
-                    <IoMdArrowDropdownCircle className='slide-bottom' />
+                    <p className='mr-[8px] text-[#ffd200]'>Media</p>
+                    <IoMdArrowDropdownCircle className='slide-bottom text-[#ffd200]' />
                 </div>                
                 <ul className='mylist'>
-                    <li>Mollit dolore velit fugiat sit magna esse mollit in aute.</li>
-                    <li>Mollit dolore velit fugiat sit magna esse mollit in aute.</li>
-                    <li>Mollit dolore velit fugiat sit magna esse mollit in aute.</li>
+                    <li>Audio Messages</li>
+                    <li>Image Gallery</li>
+                    <li>Video Gallery</li>
                 </ul>
             </div>
             {/* third row */}
             <div>
                 <div className='flex flex-row items-center'>
-                    <p className='mr-[8px]'>Contact</p>
-                    <IoMdArrowDropdownCircle className='slide-bottom' />
+                    <p className='mr-[8px] text-[#ffd200]'>Contact</p>
+                    <IoMdArrowDropdownCircle className='slide-bottom text-[#ffd200]' />
                 </div>                
                 <ul className='mylist'>
-                    <li>Mollit dolore velit fugiat sit magna esse mollit in aute.</li>
-                    <li>Mollit dolore velit fugiat sit magna esse mollit in aute.</li>
-                    <li>Mollit dolore velit fugiat sit magna esse mollit in aute.</li>
+                    <li>Prayer Requests</li>
+                    <li>Testimonies</li>
+                    <li>Make a Donation</li>
                 </ul>
             </div>
         </div>
