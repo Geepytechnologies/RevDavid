@@ -9,7 +9,7 @@ import 'animate.css';
 
 export default function Footer() {
   return (
-    <div className='h-[auto] pb-[50px] sm:pb-[0px] flex flex-col items-center justify-center bg-[#15255b] '>
+    <div className='h-[auto] pb-[50px] sm:pb-[0px] flex flex-col items-center justify-center footer '>
         <div className='w-[60%] flex flex-col items-center justify-center'>
             <div className='flex w-[100%] items-center justify-center sm:justify-center'>
                 <div onClick={()=>{router.push('/')}} className='flex items-center basis-[50%] sm:basis-[50%] md:basis-[30%] lg:[25%]'>

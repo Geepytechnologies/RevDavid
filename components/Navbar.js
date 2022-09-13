@@ -142,7 +142,7 @@ export default function Navbar(props) {
         <div ref={side} className='w-[70vw] fixed bg-[#15255b]  border-none z-[100] top-[90px] text-white right-[0px] overflow-hidden absolute sidenavglass max-h-[0px] h-[100vh] md:!hidden transition-[max-height] duration-500 ease-in-out'><Sidenav /></div>
     </div>
     {/* solid navbar */}
-    <div ref={solidnav} className='text-white w-[100%] border-b shadow-[0_7px_60px_-15px_rgba(0,0,0,0.3)] border-b-[#f7f7f7] h-[110px] flex items-center bg-[#9b0000] opacity-[0.8] hidden sticky top-0 z-[100]'>
+    <div ref={solidnav} className='text-white w-[100%] border-b shadow-[0_7px_60px_-15px_rgba(0,0,0,0.3)] border-b-[#f7f7f7] h-[110px] flex items-center bg opacity-[0.9] hidden sticky top-0 z-[100]'>
         {/* logo section */}
         <div onClick={()=>{router.push('/')}} className='flex items-center basis-[50%] sm:basis-[50%] md:basis-[30%] lg:[25%]'>
               <p className='font-allura font-[700] text-[25px] text-[#bfccd4]'>Rev David Akanwa</p>
