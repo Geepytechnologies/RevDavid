@@ -1,4 +1,4 @@
-import React, {useRef} from 'react'
+import React, {useRef, useState} from 'react'
 import Header from '../../components/Header'
 import Navbar from '../../components/Navbar'
 import Footer from '../../components/Footer'
@@ -6,6 +6,7 @@ import ReactPlayer from 'react-player'
 import Image from 'next/image'
 import { IoMdHeartEmpty } from 'react-icons/io'
 import {BiSearchAlt2} from 'react-icons/bi'
+import { RotatingLines } from 'react-loader-spinner'
 
 export default function Index() {
   const images = [
@@ -34,6 +35,12 @@ export default function Index() {
       url: '/img-2.jpg',
     },
   ]
+  const settings = {
+    strokeColor: "grey",
+    width: "80",
+    strokeWidth: "5"
+  }
+  const [loading, setLoading] = useState(true);
   const search = useRef();
   const theimage = useRef();
   const imgpic = false;
@@ -48,20 +55,22 @@ export default function Index() {
         </div>
     </div>
   );
+  // https://www.youtube.com/watch?v=W8UsgDOk8Aw
   const VideoGallery = ()=> (
     <div className='mb-[50px]'>
       <p className='font-[600] text-[35px] text-center '>Video Gallery</p>
-      <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 justify-items-center'>
+      <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2 justify-items-center'>
         <div className='w-[350px] h-[350px] '>
-          <ReactPlayer controls pip={true} url='/https://www.youtube.com/watch?v=W8UsgDOk8Aw' height='100%' width='100%' />
+          {loading ? <RotatingLines {...settings} className="absolute top-[50%] left-[50%] " /> : null }
+          <ReactPlayer onReady={()=>setLoading(false)} controls pip={true} url='https://www.youtube.com/watch?v=W8UsgDOk8Aw' height='100%' width='100%' />
           <p>Title</p>
         </div>
         <div className='w-[350px] h-[350px] '>
-          <ReactPlayer controls pip={true} url='/https://www.youtube.com/watch?v=W8UsgDOk8Aw' height='100%' width='100%' />
+          <ReactPlayer controls pip={true} url='' height='100%' width='100%' />
           <p>Title</p>
         </div>
         <div className='w-[350px] h-[350px] '>
-          <ReactPlayer controls pip={true} url='/https://www.youtube.com/watch?v=W8UsgDOk8Aw' height='100%' width='100%' />
+          <ReactPlayer controls pip={true} url='' height='100%' width='100%' />
           <p>Title</p>
         </div>
       </div>
@@ -71,14 +80,16 @@ export default function Index() {
     <div className='mb-[40px]'>
      <p className='font-[600] text-[35px] text-center '>Image Gallery</p>
      <div className='flex items-center justify-center'>
-      <div className='grid grid-cols-3 gap-2'>
+      <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2'>
       {images.map((item,index)=>(
-        <div id={item.id} key={index} className='w-[300px] h-[300px] relative' >
-          <Image src={item.url} alt='images' layout='fill' className='theimage'  />
-          <div  className='search bg-[rgba(0,0,0,0.6)] h-[100%] w-[100%] absolute top-0 '><BiSearchAlt2 className='absolute top-[50%] left-[50%] text-white text-[20px] ' /></div>
+        <div key={index}  className='w-[300px] h-[300px] relative cursor-pointer' >
+          <Image src={item.url} alt='images' layout='fill' className='hover:bg-[red] '   />
+          <div className='book opacity-0 hover:opacity-100 bg-[rgba(0,0,0,0.6)] h-[100%] w-[100%] absolute top-0 flex items-center justify-center '>
+            <BiSearchAlt2 className='text-white text-[25px] ' />
+          </div>
         </div>
-      )
-      )}
+       ) 
+      )} 
       </div>
      </div>
     </div>
@@ -91,17 +102,17 @@ export default function Index() {
   const AudioMessages = ()=>(
     <div className='flex flex-col items-center'>
       <p className='font-[600] text-[35px] text-center '>Audio Streaming</p>
-      <div className='grid grid-cols-2 md:grid-cols-4 justify-between bg-[grey] w-[100%] md:w-[80%] h-[200px] p-[20px] '>
-        <div className='bg-[white] rounded-lg h-[100%] w-[250px] relative'>
+      <div className='grid gap-2 grid- grid-cols-2 md:grid-cols-4 justify-between bg-[grey] w-[90%] md:w-[80%] h-[200px] p-[20px] '>
+        <div className='bg-[white] rounded-lg h-[100%] w-[150px] md:w-[250px] relative'>
           <Image src='/podcast-soundcloud.png' alt='img3' layout='fill' />
         </div>
-        <div className='bg-[white] rounded-lg h-[100%] w-[250px] relative'>
+        <div className='bg-[white] rounded-lg h-[100%] w-[150px] md:w-[250px] relative'>
           <Image src='/Spotify_logo.png' alt='img3' layout='fill' />
         </div>        
-        <div className='bg-[white] rounded-lg h-[100%] w-[250px] relative'>
+        <div className='bg-[white] rounded-lg h-[100%] w-[150px] md:w-[250px] relative'>
           <Image src='/applepodcast.png' alt='img2' layout='fill'  />
         </div>        
-        <div className='bg-[white] rounded-lg h-[100%] w-[250px] relative'>
+        <div className='bg-[white] rounded-lg h-[100%] w-[150px] md:w-[250px] relative'>
           <Image src='/audiomack.png' alt='img' layout='fill' />
           {/* <div className="bg-[url('/audiomack.png')] bg-cover h-[auto] w-[100%] "></div> */}
         </div>

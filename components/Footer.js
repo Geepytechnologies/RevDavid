@@ -13,7 +13,7 @@ export default function Footer() {
         <div className='w-[60%] flex flex-col items-center justify-center'>
             <div className='flex w-[100%] items-center justify-center sm:justify-center'>
                 <div onClick={()=>{router.push('/')}} className='flex items-center basis-[50%] sm:basis-[50%] md:basis-[30%] lg:[25%]'>
-                    <p className='font-allura font-[700] text-[25px] text-[#9b0000]'>Rev David Akanwa</p>
+                    <p className='font-allura font-[700] text-[25px] text-[#bfccd4]'>Rev David Akanwa</p>
                 </div>
             </div>
         </div>
@@ -28,52 +28,27 @@ export default function Footer() {
               <ul className='mylist'>
                 <li>Mission</li>
                 <li>Blog</li>
+                <li>Media</li>
+                <li>Make a Donation</li>
                 <li>Intimate Vessels Church</li>
               </ul>
-            </div>
-            {/* second row */}
-            <div>
-                <div className='flex flex-row items-center'>
-                    <p className='mr-[8px] text-[#ffd200]'>Media</p>
-                    <IoMdArrowDropdownCircle className='slide-bottom text-[#ffd200]' />
-                </div>                
-                <ul className='mylist'>
-                    <li>Audio Messages</li>
-                    <li>Image Gallery</li>
-                    <li>Video Gallery</li>
-                </ul>
-            </div>
-            {/* third row */}
-            <div>
-                <div className='flex flex-row items-center'>
-                    <p className='mr-[8px] text-[#ffd200]'>Contact</p>
-                    <IoMdArrowDropdownCircle className='slide-bottom text-[#ffd200]' />
-                </div>                
-                <ul className='mylist'>
-                    <li>Prayer Requests</li>
-                    <li>Testimonies</li>
-                    <li>Make a Donation</li>
-                </ul>
             </div>
         </div>
         <div className='w-[100%] items-center justify-center flex'>
             <div className='w-[60%] p-[5px] flex items-center justify-around'>
                 <ul className='flex justify-around w-[100%] text-white'>
                     <li className='inline border rounded-full border-[rgba(255,255,255,0.3)] p-[7px] ease-in-out duration-150 transition-[border-color] hover:border-[rgba(255,255,255,0.9)] mr-[3px]'>
-                        <Link href='https://twitter.com/XYZ_ACADEMY1?t=Ag7TKGl4s1wzijAQhPtYoA&s=09' target='_blank' rel='noreferrer'><a><FaTwitter /></a></Link>
+                        <Link href='' target='_blank' rel='noreferrer'><a><FaTwitter /></a></Link>
                     </li>
                     
-                    <li className='inline  border rounded-full border-[rgba(255,255,255,0.3)] p-[7px] ease-in-out duration-150 transition-[border-color] hover:border-[rgba(255,255,255,0.9)] mr-[3px]'>
-                        <Link href='/' target='_self' rel='noreferrer'><a><FaTelegramPlane /></a></Link>
-                    </li>
                     <li className='inline  border rounded-full border-[rgba(255,255,255,0.3)] p-[7px] ease-in-out duration-150 transition-[border-color] hover:border-[rgba(255,255,255,0.9)] mr-[3px]'>
                         <Link href='/' target='_self' rel='noreferrer'><a><FaFacebook /></a></Link>
                     </li>
                     <li className='inline  border rounded-full border-[rgba(255,255,255,0.3)] p-[7px] ease-in-out duration-150 transition-[border-color] hover:border-[rgba(255,255,255,0.9)] mr-[3px]'>
-                        <Link href='https://instagram.com/officialxyzacademy?igshid=YmMyMTA2M2Y=' target='_blank' rel='noreferrer'><a><FaInstagram /></a></Link>
+                        <Link href='' target='_blank' rel='noreferrer'><a><FaInstagram /></a></Link>
                     </li>
                     <li className='inline  border rounded-full border-[rgba(255,255,255,0.3)] p-[7px] ease-in-out duration-150 transition-[border-color] hover:border-[rgba(255,255,255,0.9)] mr-[3px]'>
-                        <Link href='https://www.linkedin.com/in/xyz-academy-894959242' target='_blank' rel='noreferrer'><a><FaLinkedin /></a></Link>
+                        <Link href='' target='_blank' rel='noreferrer'><a><FaLinkedin /></a></Link>
                     </li>
                 </ul>
             </div>

@@ -163,7 +163,7 @@ export default function Navbar(props) {
                         <li className='dtext inline text-[#bfccd4] cursor-pointer font-[poppins]'><Link href='/blog'><a>Blog</a></Link>
                         </li>
                         
-                        <li className='dtext inline text-[#bfccd4] cursor-pointer font-rob'><Link href='/donate'><a></a></Link>Donate
+                        <li className='dtext inline text-[#bfccd4] cursor-pointer font-rob'><Link href='/donate'><a>Donate</a></Link>
                         </li>
                         
                         <li className='dtext inline text-[#bfccd4] cursor-pointer font-rob'><Link href='/contact'><a>Contact</a></Link></li>

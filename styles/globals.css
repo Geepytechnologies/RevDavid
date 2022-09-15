@@ -10,7 +10,13 @@ body {
   /* light green: #009B9B #009B00 */
   color: #15255b
 }
-
+.example::-webkit-scrollbar {
+  /* display: none; */
+}
+.example {
+  /* -ms-overflow-style: none;  IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
 a {
   color: inherit;
   text-decoration: none;
@@ -69,11 +75,9 @@ a {
   background: rgb(13,20,49);
 background: linear-gradient(90deg, rgba(13,20,49,1) 0%, rgba(107,122,154,1) 35%, rgba(117,133,166,1) 41%, rgba(114,130,163,1) 48%, rgba(109,125,157,1) 55%, rgba(13,20,49,1) 100%);
 }
-.book{
-  display: none;
-}
-.theimage:hover .book{
-  display: block;
+
+.theimage:hover + .book{
+ display: block;
 }
 .footer{
   background-color: #15255b;
