@@ -1,6 +1,6 @@
 import React from 'react'
 import {FaTwitter, FaFacebook, FaInstagram, FaLinkedin, FaTelegramPlane, FaBars} from 'react-icons/fa'
-import {AiOutlineCopyright, AiFillContacts} from 'react-icons/ai'
+import {AiOutlineCopyright, AiFillContacts, AiFillYoutube} from 'react-icons/ai'
 import {FaHome,FaBloggerB } from 'react-icons/fa'
 import {MdMiscellaneousServices } from "react-icons/md";
 import { IoIosContacts } from "react-icons/io";
@@ -52,7 +52,7 @@ export default function Sidenav() {
                         <Link href='' target='_blank' rel='noreferrer'><a><FaInstagram /></a></Link>
                     </li>
                     <li className='inline hover:text-[hsl(34,100%,47%)]'>
-                        <Link href='' target='_blank' rel='noreferrer'><a><FaLinkedin  /></a></Link>
+                        <Link href='' target='_blank' rel='noreferrer'><a><AiFillYoutube  /></a></Link>
                     </li>
                 </ul>
             </div>

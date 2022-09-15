@@ -10,6 +10,11 @@ body {
   /* light green: #009B9B #009B00 */
   color: #15255b
 }
+.socialshadow{
+  box-shadow: -5px -5px 5px 0px rgba(173,160,160,0.75);
+-webkit-box-shadow: -5px -5px 5px 0px rgba(173,160,160,0.75);
+-moz-box-shadow: -5px -5px 5px 0px rgba(173,160,160,0.75);
+}
 .example::-webkit-scrollbar {
   /* display: none; */
 }

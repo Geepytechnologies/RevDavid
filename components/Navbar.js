@@ -5,8 +5,10 @@ import {FaTwitter, FaFacebook, FaInstagram, FaLinkedin, FaTelegramPlane, FaBars}
 import {RiCloseCircleLine} from 'react-icons/ri'
 import Sidenav from './Sidenav'
 import About from './About'
+import 'animate.css';
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { AiFillYoutube } from 'react-icons/ai'
 
 
 
@@ -79,13 +81,13 @@ export default function Navbar(props) {
       <div ref={transnav} className='text-white w-[100%]  h-[110px] flex items-center absolute top-0 z-[100] '>
             {/* logo section */}
             <div onClick={()=>{router.push('/')}} className='flex items-center basis-[50%] sm:basis-[50%] md:basis-[30%] lg:[25%]'>
-                <p className='font-allura font-[700] text-[25px] text-[#9b0000]'>Rev David Akanwa</p>
+                <p className='font-allura pl-[5px] font-[700] text-[35px] text-[#9b0000]'>Rev David Akanwa</p>
             </div>
             {/* end of logo section */}
             {/* menu section */}
             <div className='basis-[50%] hidden md:block md:basis-[70%] lg:basis-[50%]'>
                 <div className=''>
-                    <ul className='flex justify-around'>
+                    <ul className='flex justify-around text-[20px] '>
                             <li className='dtext inline text-[white] cursor-pointer font-[poppins]'><Link href='/'><a>Home</a></Link></li>
                             
                             <li className='dtext inline text-[white] cursor-pointer font-[poppins]'><Link href='/about'><a>About</a></Link></li>
@@ -108,23 +110,20 @@ export default function Navbar(props) {
             {/* end of menu section */}
             {/* social icons */}
             <div className='lg:basis-[25%] lg:flex lg:justify-end hidden lg:block '>
-                <div className='w-[70%] p-[5px]'>
+                <div className='w-[70%] p-[10px] bg-[#9b0000] mr-[4px] rounded-xl socialshadow border-2 border-white'>
                 <ul className='flex justify-between pr-[20px]'>
                     <li className='inline'>
-                        <Link href='https://twitter.com/XYZ_ACADEMY1?t=Ag7TKGl4s1wzijAQhPtYoA&s=09' target='_blank' rel='noreferrer'><a><FaTwitter style={{fill: '#bfccd4'}} /></a></Link>
+                        <Link href='' target='_blank' rel='noreferrer'><a><FaTwitter style={{fill: '#bfccd4'}} /></a></Link>
                     </li>
                     
                     <li className='inline'>
-                        <Link href='/' target='_self' rel='noreferrer'><a><FaTelegramPlane style={{fill: '#bfccd4'}} /></a></Link>
+                        <Link href='/' target='_self' rel='noreferrer'><a><AiFillYoutube style={{fill: '#bfccd4'}} /></a></Link>
                     </li>
                     <li className='inline'>
-                        <Link href='/' target='_self' rel='noreferrer'><a><FaFacebook style={{fill: '#bfccd4'}}/></a></Link>
+                        <Link href='' target='_self' rel='noreferrer'><a><FaFacebook style={{fill: '#bfccd4'}}/></a></Link>
                     </li>
                     <li className='inline'>
-                        <Link href='https://instagram.com/officialxyzacademy?igshid=YmMyMTA2M2Y=' target='_blank' rel='noreferrer'><a><FaInstagram style={{fill: '#bfccd4'}}/></a></Link>
-                    </li>
-                    <li className='inline'>
-                        <Link href='https://www.linkedin.com/in/xyz-academy-894959242' target='_blank' rel='noreferrer'><a><FaLinkedin style={{fill: '#bfccd4'}}/></a></Link>
+                        <Link href='' target='_blank' rel='noreferrer'><a><FaInstagram style={{fill: '#bfccd4'}}/></a></Link>
                     </li>
                 </ul>
                 </div>
@@ -142,7 +141,7 @@ export default function Navbar(props) {
         <div ref={side} className='w-[70vw] fixed bg-[#15255b]  border-none z-[100] top-[90px] text-white right-[0px] overflow-hidden absolute sidenavglass max-h-[0px] h-[100vh] md:!hidden transition-[max-height] duration-500 ease-in-out'><Sidenav /></div>
     </div>
     {/* solid navbar */}
-    <div ref={solidnav} className='text-white w-[100%] border-b shadow-[0_7px_60px_-15px_rgba(0,0,0,0.3)] border-b-[#f7f7f7] h-[110px] flex items-center bg opacity-[0.9] hidden sticky top-0 z-[100]'>
+    <div ref={solidnav} className='text-white w-[100%] border-b shadow-[0_7px_60px_-15px_rgba(0,0,0,0.3)] border-b-[#f7f7f7] h-[80px] flex items-center bg opacity-[0.9] hidden sticky top-0 z-[100]'>
         {/* logo section */}
         <div onClick={()=>{router.push('/')}} className='flex items-center basis-[50%] sm:basis-[50%] md:basis-[30%] lg:[25%]'>
               <p className='font-allura font-[700] text-[25px] text-[#bfccd4]'>Rev David Akanwa</p>
@@ -174,23 +173,19 @@ export default function Navbar(props) {
         {/* end of menu section */}
         {/* social icons */}
         <div className='lg:basis-[25%] lg:flex lg:justify-end hidden lg:block '>
-            <div className='w-[70%] p-[5px]'>
+            <div className='w-[70%] p-[10px] bg-[white] mr-[4px] rounded-xl socialshadow border-2 border-[white] '>
             <ul className='flex justify-between pr-[20px]'>
                 <li className='inline'>
-                    <Link href='https://twitter.com/XYZ_ACADEMY1?t=Ag7TKGl4s1wzijAQhPtYoA&s=09' target='_blank' rel='noreferrer'><a><FaTwitter style={{fill: '#abb4bf'}} /></a></Link>
-                </li>
-                
-                <li className='inline'>
-                    <Link href='/' target='_self' rel='noreferrer'><a><FaTelegramPlane style={{fill: '#abb4bf'}}/></a></Link>
+                    <Link href='' target='_blank' rel='noreferrer'><a><FaTwitter style={{fill: '#9b0000'}} /></a></Link>
                 </li>
                 <li className='inline'>
-                    <Link href='/' target='_self' rel='noreferrer'><a><FaFacebook style={{fill: '#abb4bf'}}/></a></Link>
+                    <Link href='' target='_self' rel='noreferrer'><a><AiFillYoutube style={{fill: '#9b0000'}}/></a></Link>
                 </li>
                 <li className='inline'>
-                    <Link href='https://instagram.com/officialxyzacademy?igshid=YmMyMTA2M2Y=' target='_blank' rel='noreferrer'><a><FaInstagram style={{fill: '#abb4bf'}}/></a></Link>
+                    <Link href='' target='_self' rel='noreferrer'><a><FaFacebook style={{fill: '#9b0000'}}/></a></Link>
                 </li>
                 <li className='inline'>
-                    <Link href='https://www.linkedin.com/in/xyz-academy-894959242' target='_blank' rel='noreferrer'><a><FaLinkedin style={{fill: '#abb4bf'}}/></a></Link>
+                    <Link href='' target='_blank' rel='noreferrer'><a><FaInstagram style={{fill: '#9b0000'}}/></a></Link>
                 </li>
             </ul>
             </div>

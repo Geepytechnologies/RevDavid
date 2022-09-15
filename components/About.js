@@ -12,6 +12,7 @@ import Image from 'next/image';
 import 'animate.css';
 import Navbar from './Navbar';
 import {FiYoutube , FiFacebook} from 'react-icons/fi'
+import {ImYoutube2} from 'react-icons/im'
 
 
 
@@ -57,7 +58,7 @@ export default function About() {
            <div className='text-white'>Join Rev David Akanwa</div>
            <div className='text-white'>
             <div className='flex flex-row items-center justify-around'>
-              <FiYoutube className='text-[30px]' />
+              <ImYoutube2 className='text-[30px] text-[white]' />
               <FiFacebook className='text-[30px]' />
             </div>
            </div>
