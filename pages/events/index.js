@@ -54,7 +54,7 @@ export default function Index() {
        <Navbar />
        <Eventsheader />
        {/* Events section */}
-        <div>
+        <div className=''>
           <div className='flex flex-col items-center justify-center' >
             <h2>Upcoming Events</h2>
             <div className='example w-[90%] md:w-[80%]'>
