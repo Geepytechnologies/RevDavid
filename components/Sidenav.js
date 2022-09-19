@@ -32,10 +32,6 @@ export default function Sidenav() {
             </div>
             <div className='flex ml-[4px] flex-row items-center cursor-pointer w-[70%] hover:scale-[1.02]  py-[5px] rounded-r-lg my-[10px]'>
                 <div className='mr-[5px]'><FaBloggerB style={{fill: 'hsl(34,100%,47%)'}}/></div>
-                <div><Link href='/donate'><a>Donate</a></Link></div>
-            </div>
-            <div className='flex ml-[4px] flex-row items-center cursor-pointer w-[70%] hover:scale-[1.02]  py-[5px] rounded-r-lg my-[10px]'>
-                <div className='mr-[5px]'><FaBloggerB style={{fill: 'hsl(34,100%,47%)'}}/></div>
                 <div><Link href='/contact'><a>Contact</a></Link></div>
             </div>
         </div>

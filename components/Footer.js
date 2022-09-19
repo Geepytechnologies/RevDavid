@@ -9,8 +9,9 @@ import 'animate.css';
 
 export default function Footer() {
   return (
+    <div className='footer1'>
     <div className='h-[auto] pb-[50px] sm:pb-[0px] flex flex-col items-center justify-center footer '>
-        <div className='w-[60%] flex flex-col items-center justify-center'>
+        <div className='w-[100%] mb-[40px] flex flex-col items-center justify-center'>
             <div className='flex w-[100%] items-center justify-center sm:justify-center'>
                 <div onClick={()=>{router.push('/')}} className='flex items-center basis-[50%] sm:basis-[50%] md:basis-[30%] lg:[25%]'>
                     <p className='font-allura font-[700] text-[25px] text-[#bfccd4]'>Rev David Akanwa</p>
@@ -22,15 +23,15 @@ export default function Footer() {
             {/* first row */}
             <div>
                 <div className='flex flex-row items-center animate__animated animate__bounce animate__infinite	infinite'>
-                    <p className='mr-[8px] text-[#ffd200] '>Quick Links</p>
-                    <IoMdArrowDropdownCircle className='animate__animated animate__bounce text-[#ffd200]' />
+                    <p className='mr-[8px] text-[white] font-[600] '>Quick Links</p>
+                    <IoMdArrowDropdownCircle className='animate__animated animate__bounce text-[white]' />
                 </div>
               <ul className='mylist'>
-                <li>Mission</li>
-                <li>Blog</li>
-                <li>Media</li>
-                <li>Make a Donation</li>
-                <li>Intimate Vessels Church</li>
+                <li><Link href='/'>Mission</Link></li>
+                <li><Link href='/blog'>Blog</Link></li>
+                <li><Link href='/media'>Media</Link></li>
+                <li><Link href='/contact'>Make a Donation</Link></li>
+                <li><Link href='/about/intimatevesselschurch'>Intimate Vessels Church</Link></li>
               </ul>
             </div>
         </div>
@@ -58,6 +59,7 @@ export default function Footer() {
             <p>All rights reserved</p>
             <p className='flex flex-row items-center justify-center'>Made with <span className='mx-[2px]'><AiFillHeart /></span> by Geepy</p>
         </div>
+    </div>
     </div>
   )
 }

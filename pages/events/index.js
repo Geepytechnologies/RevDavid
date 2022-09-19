@@ -14,7 +14,6 @@ if(typeof window !== "undefined"){
 import 'owl.carousel/dist/assets/owl.carousel.css';
 import 'owl.carousel/dist/assets/owl.theme.default.css';
 import CountdownTimer from '../../components/CountdownTimer'
-import ImageGallery from 'react-image-gallery';
 
 const Owl = dynamic(()=> import("react-owl-carousel"),{ssr:false});
 export default function Index() {
@@ -49,20 +48,6 @@ export default function Index() {
         </div>
     </div>
   )
-  const images = [
-    {
-      original: 'img-1.jpg',
-      thumbnail: 'img-1.jpg',
-    },
-    {
-      original: 'img-2.jpg',
-      thumbnail: 'img-2.jpg',
-    },
-    {
-      original: 'img-3.jpg',
-      thumbnail: 'img-3.jpg',
-    },
-  ];
   return (
     <div>
        <Header />
@@ -76,9 +61,11 @@ export default function Index() {
             <Owl className='owl-theme' loop {...settings} >
               <div className='w-[300px] h-[300px] relative'>
                 <Image src='/bgg2.jpg' alt="" layout='fill' className='rounded-xl' />
-                <div className='opacity-0 rounded-xl hover:opacity-100 bg-[rgba(0,0,0,0.6)] h-[100%] w-[100%] absolute top-0 flex items-center justify-center '>
-                  <FcLock />
+                <div className='opacity-0 rounded-xl hover:opacity-100 bg-[rgba(0,0,0,0.6)] h-[100%] w-[100%] absolute top-0 flex flex-col items-center justify-center '>
+                  <FcLock className='text-[40px]' />
+                  <div className='flex flex-row' >
                   <GiAlarmClock className='text-white text-[35px] ' /><CountdownTimer countDownDate="Jan 5, 2024 15:37:25" />
+                  </div>
                 </div>
               </div>
               <div className='w-[300px] h-[300px] relative '>
@@ -103,7 +90,7 @@ export default function Index() {
           <div className='flex flex-col items-center justify-center' >
             <h2>Most Recent Events</h2>
             <div className='example w-[90%] md:w-[80%]'>
-            <Owl className='owl-theme' loop {...settings} >
+            {/* <Owl className='owl-theme' loop {...settings} >
               <div className='w-[250px] h-[250px] relative '>
                 <Image src='/img-1.jpg' alt="" layout='fill' />
               </div>
@@ -116,7 +103,7 @@ export default function Index() {
               <div className='w-[250px] h-[250px] relative '>
                 <Image src='/img-3.jpg' alt="" layout='fill' />
               </div>
-            </Owl>
+            </Owl> */}
             </div>
           </div>
           </div>

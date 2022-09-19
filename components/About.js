@@ -36,22 +36,30 @@ export default function About() {
             <div className='item h-[500px] w-[100%] relative'>
                 <Image src='/bgg2.jpg' layout='fill' objectFit='cover' className='image1'    />
                 <div className='absolute top-0 overlay'></div>
-                <p className='line absolute top-[50%] left-[20%] text-white text-[25px]'>Laboris incididunt cupidatat ut occaecat dolor non elit ipsum excepteur quis incididunt velit.</p>
+                <div className='w-[100%] h-[100%] absolute top-[0px] flex items-center justify-center '>
+                  <p className='line text-center text-white text-[25px]'>Laboris incididunt cupidatat ut occaecat dolor non elit ipsum excepteur quis incididunt velit.</p>
+                </div>
             </div>
             <div className='item h-[500px] w-[100%] relative'>
                 <Image src='/home-bg.jpg' layout='fill' objectFit='cover' objectPosition='90% 10%'  />
                 <div className='absolute top-0 overlay'></div>
-                <p className='line absolute top-[50%] left-[50%] text-white text-[25px]'>Laboris incididunt cupidatat ut occaecat dolor non elit ipsum excepteur quis incididunt velit.</p>
+                <div className='w-[100%] h-[100%] absolute top-[0px] flex items-center justify-center '>
+                  <p className='line text-center text-white text-[25px]'>Laboris incididunt cupidatat ut occaecat dolor non elit ipsum excepteur quis incididunt velit.</p>
+                </div>
             </div>
             <div className='item h-[500px] w-[100%] relative'>
                 <Image src='/img-3.jpg' layout='fill' objectFit='cover' className='image'    />
                 <div className='absolute top-0 overlay'></div>
-                <p className='line absolute top-[50%] left-[20%] text-white text-[25px]'>Laboris incididunt cupidatat ut occaecat dolor non elit ipsum excepteur quis incididunt velit.</p>
+                <div className='w-[100%] h-[100%] absolute top-[0px] flex items-center justify-center '>
+                  <p className='line text-center text-white text-[25px]'>Laboris incididunt cupidatat ut occaecat dolor non elit ipsum excepteur quis incididunt velit.</p>
+                </div>
             </div>
             <div className='item h-[500px] w-[100%] relative'>
                 <Image src='/img-2.jpg' layout='fill' objectFit='cover' className='image'    />
                 <div className='absolute top-0 overlay'></div>
-                <p className='line absolute top-[50%] left-[20%] text-white text-[25px]'>Laboris incididunt cupidatat ut occaecat dolor non elit ipsum excepteur quis incididunt velit.</p>
+                <div className='w-[100%] h-[100%] absolute top-[0px] flex items-center justify-center '>
+                  <p className='line text-center text-white text-[25px]'>Laboris incididunt cupidatat ut occaecat dolor non elit ipsum excepteur quis incididunt velit.</p>
+                </div>
             </div>
           </Owl>
           <div className='bg-[#9b0000] h-[90px] w-[100%] flex flex-row justify-around items-center '>

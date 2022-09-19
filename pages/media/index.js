@@ -2,11 +2,12 @@ import React, {useRef, useState} from 'react'
 import Header from '../../components/Header'
 import Navbar from '../../components/Navbar'
 import Footer from '../../components/Footer'
-import ReactPlayer from 'react-player'
+import ReactPlayer from 'react-player/youtube'
 import Image from 'next/image'
 import { IoMdHeartEmpty } from 'react-icons/io'
 import {BiSearchAlt2} from 'react-icons/bi'
 import { RotatingLines } from 'react-loader-spinner'
+import Swiper from '../../components/Swiper'
 
 export default function Index() {
   const images = [
@@ -60,10 +61,10 @@ export default function Index() {
     <div className='mb-[50px]'>
       <p className='font-[600] text-[35px] text-center '>Video Gallery</p>
       <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2 justify-items-center'>
-        <div className='w-[350px] h-[350px] '>
+        <div className='w-[350px] h-[350px] relative '>
           {loading ? <RotatingLines {...settings} className="absolute top-[50%] left-[50%] " /> : null }
-          <ReactPlayer onReady={()=>setLoading(false)} controls pip={true} url='https://www.youtube.com/watch?v=W8UsgDOk8Aw' height='100%' width='100%' />
-          <p>Title</p>
+          <ReactPlayer onReady={()=>setLoading(false)} controls pip={true} url='http://www.youtube.com/watch?v=W8UsgDOk8Aw' height='100%' width='100%' className='absolute top-0' />
+          {/* <p>Title</p> */}
         </div>
         <div className='w-[350px] h-[350px] '>
           <ReactPlayer controls pip={true} url='' height='100%' width='100%' />
