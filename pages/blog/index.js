@@ -21,7 +21,7 @@ export default function Index() {
     <div>
       <div className='flex flex-row items-center justify-center my-[6px]'>
         <BsFillPenFill className='text-[25px]' />
-        <h1 className='text-[20px]'>From the Reverend's Desk</h1>
+        <h1 className='text-[20px]'>From the Desk of the Reverend</h1>
       </div>
       <div className='w-[100%] flex items-center justify-center'>
       <div className='flex flex-col md:flex-row items-center justify-between w-[100%] md:w-[80%]'>
