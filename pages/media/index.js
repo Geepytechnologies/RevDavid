@@ -7,7 +7,6 @@ import Image from 'next/image'
 import { IoMdHeartEmpty } from 'react-icons/io'
 import {BiSearchAlt2} from 'react-icons/bi'
 import { RotatingLines } from 'react-loader-spinner'
-import Swiper from '../../components/Swiper'
 
 export default function Index() {
   const images = [
