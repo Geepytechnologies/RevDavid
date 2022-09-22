@@ -1,0 +1,25 @@
+/* Works on Firefox */
+.gallery {
+    border-top: 2px solid white;
+    background: #15255bcc;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    scrollbar-width: none;
+    scrollbar-color: rgb(157, 159, 163) rgb(224, 225, 228);
+  }
+  /* Works on Chrome, Edge, and Safari */
+  .gallery::-webkit-scrollbar {
+    height: 8px;
+  }
+  
+  .gallery::-webkit-scrollbar-track {
+ /* background: linear-gradient(90deg, #4b6cb7 0%, #182848 100%); */
+ background: rgb(224, 225, 228);
+ }
+  
+  .gallery::-webkit-scrollbar-thumb {
+    background-color: rgb(157, 159, 163);
+    height: 3px;
+    border-radius: 20px;
+    border: 2px solid rgb(224, 225, 228);
+  }

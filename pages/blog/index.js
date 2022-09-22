@@ -5,6 +5,7 @@ import Footer from '../../components/Footer'
 import { BsFillPenFill } from 'react-icons/bs'
 import Image from 'next/image'
 
+
 export default function Index() {
   const Blogheader = ()=> (
     <div className=" bg-[url('/img-3.jpg')] h-[400px] w-[100%] bg-cover relative ">
