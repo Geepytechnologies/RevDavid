@@ -50,6 +50,12 @@ a {
   animation-delay: 0.3s;
   animation-name: fadeInLeft;
 }
+.active .line2{
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  animation-delay: 0.5s;
+  animation-name: fadeInLeft;
+}
 .active .line1{
   animation-duration: 1s;
   animation-fill-mode: both;
@@ -68,8 +74,8 @@ a {
   clip-path: polygon(0 0, 63% 0, 35% 100%, 0% 100%);
 }
 .image{
-  background-image: url('/img-2.jpg');
-  min-height: 500px;
+  background-image: url('/go8.jpg');
+  height: auto;
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;

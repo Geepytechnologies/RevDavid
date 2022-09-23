@@ -6,6 +6,7 @@ import styles from "../styles/Slider.module.css"
 
 export default function Slider(){
     const bottom = useRef({});
+    const slide = useRef();
     const [index, setIndex] = useState(0);
     const [bottomimage, setBottomimage] = useState(0)
     const topimages = [
@@ -84,6 +85,11 @@ export default function Slider(){
         }
     }
     useEffect(()=>{
+        const windowWidth = window.innerWidth;
+        const element = bottom.current[index];
+        const coord = element.getBoundingClientRect();
+        const diff = coord.right - windowWidth;
+        const actualdiff = windowWidth-diff;
         const myarray = Object.values(bottom.current);
         const a = myarray.filter((e,i)=> i !== index);
         if(index !== null){
@@ -92,6 +98,20 @@ export default function Slider(){
                 btn.classList.remove('border-2','border-[white]');
             });
         }
+        // making the slider to be in view
+        if(coord.left < 0 && index !== 0){
+            slide.current.scrollLeft = coord.left * -1;
+        }
+        if(coord.left < 0 && index == 0){
+            slide.current.scrollLeft = 0;
+        }
+        if(coord.left > 0 && diff > 0){
+            slide.current.scrollLeft = 150 * index;
+        }
+        if(coord.left < 0 && diff < 0){
+            slide.current.scrollLeft = 150 * index;
+        }
+
         // console.log([index])
     },[index])
     const handleSlider = (i)=>{
@@ -112,7 +132,7 @@ export default function Slider(){
             </div>
           </div>
           {/* bottom slider */}
-          <div className={styles.gallery}>
+          <div ref={slide} className={styles.gallery}>
             <div className='flex flex-row items-center px-[6px] '>
             {topimages.map((item,i)=>(
                 <div ref={(element) => bottom.current[i] = element} value='me' key={i} onClick={()=>handleSlider(i)} className='min-w-[150px] min-h-[150px] my-[3px] mr-[10px] relative' >
