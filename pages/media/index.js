@@ -42,6 +42,7 @@ export default function Index() {
   }
   const [loading, setLoading] = useState(true);
   const search = useRef();
+  const video = useRef();
   const theimage = useRef();
   const imgpic = false;
   const Imageheader = ()=> (
@@ -58,10 +59,13 @@ export default function Index() {
   // https://www.youtube.com/watch?v=W8UsgDOk8Aw
   const VideoGallery = ()=> (
     <div className='mb-[50px]'>
-      <p className='font-[600] text-[35px] text-center '>Video Gallery</p>
+      <p className='font-[600] text-[35px] text-center '>Videos</p>
       <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2 justify-items-center'>
-        <div className='w-[350px] h-[350px] relative '>
-          {loading ? <RotatingLines {...settings} className="absolute top-[50%] left-[50%] " /> : null }
+        <div ref={video} className='w-[350px] h-[350px] relative '>
+          {/* {loading ? <RotatingLines {...settings} className="absolute top-[50%] left-[50%] " /> : null } */}
+         <iframe  width="100%" height="100%"
+            src="https://www.youtube.com/embed/tgbNymZ7vqY">
+         </iframe>
           {/* <ReactPlayer onReady={()=>setLoading(false)} controls pip={true} url='http://www.youtube.com/watch?v=W8UsgDOk8Aw' height='100%' width='100%' className='absolute top-0' /> */}
           {/* <p>Title</p> */}
         </div>

@@ -34,25 +34,25 @@ export default function About() {
   return (
     <div className='relative'>
           <Owl className='owl-theme' loop  {...settings} >
-            <div className='item w-[100%] relative'>
-                <Image src='/go9.jpg' layout='responsive' height='100%' width='100%' objectFit='cover'     />
+            <div className='item w-[100%] md:h-[500px] relative'>
+                <Image src='/go9.jpg' layout='responsive' height='100%' width='100%' objectFit='cover' objectPosition="50% 50%"    />
                 <div className='absolute top-0 overlay'></div>
                 <div className='w-[100%] h-[100%] absolute top-[0px] flex flex-col items-center justify-center '>
-                  <p className='line text-center text-white text-[25px]'>Preaching the</p> <span className='text-[28px] text-center text-white font-[700] line2 '>word of Faith</span>
+                  <p className='line text-center text-white md:text-[50px] text-[25px]'>Preaching the</p> <span className='text-[28px] md:text-[60px] text-center text-white font-[700] line2 '>word of Faith</span>
                 </div>
             </div>
-            <div className='item  w-[100%] relative'>
-                <Image src='/go2.jpg' layout='responsive' height='100%' width='100%' objectFit='cover'   />
+            <div className='item  w-[100%] md:h-[500px] relative'>
+                <Image src='/go4.jpg' layout='responsive' height='100%' width='100%' objectFit='cover' objectPosition="50% 50%"  />
                 <div className='absolute top-0 overlay'></div>
                 <div className='w-[100%] h-[100%] flex-col absolute top-[0px] flex items-center justify-center '>
-                <p className='line text-center text-white text-[25px]'>Intimacy in</p> <span className='text-[28px] text-center text-white font-[700] line2 '>God&apos;s presence</span>
+                <p className='line text-center text-white md:text-[50px] text-[25px]'>Intimacy in</p> <span className='text-[28px] md:text-[60px] text-center text-white font-[700] line2 '>God&apos;s presence</span>
                 </div>
             </div>
-            <div className='item  w-[100%] relative'>
-                <Image src='/go10.jpg' layout='responsive' height='100%' width='100%' objectFit='cover'     />
+            <div className='item  w-[100%] md:h-[500px] relative'>
+                <Image src='/go10.jpg' layout='responsive' height='100%' width='100%' objectFit='cover' objectPosition="50% 50%"    />
                 <div className='absolute top-0 overlay'></div>
                 <div className='w-[100%] h-[100%] absolute flex-col top-[0px] flex items-center justify-center '>
-                  <p className='line text-center text-white text-[25px]'>God&apos;s Divine</p><span className='text-[28px] text-center text-white font-[700] line2 '>Purpose</span>
+                  <p className='line text-center text-white md:text-[50px] text-[25px]'>God&apos;s Divine</p><span className='text-[28px] text-center text-white font-[700] md:text-[60px] line2 '>Purpose</span>
                 </div>
             </div>
           </Owl>

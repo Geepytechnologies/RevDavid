@@ -11,11 +11,10 @@ const nextConfig = {
     }),
     );
     return config;
-  },
-  images: {
+  },images:{
     domains: [
       'youtube.com',
-    ],
-  }
+    ]}
+  
 }
 module.exports = nextConfig

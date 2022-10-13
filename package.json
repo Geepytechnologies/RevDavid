@@ -9,8 +9,12 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@chakra-ui/react": "^2.3.5",
+    "@emotion/react": "^11.10.4",
+    "@emotion/styled": "^11.10.4",
     "animate.css": "^4.1.1",
     "aos": "^2.3.4",
+    "framer-motion": "^7.5.3",
     "jquery": "^3.6.0",
     "next": "12.2.0",
     "react": "18.2.0",
@@ -19,7 +23,8 @@
     "react-hook-form": "^7.36.0",
     "react-icons": "^4.4.0",
     "react-loader-spinner": "^5.3.4",
-    "react-owl-carousel": "^2.3.3"
+    "react-owl-carousel": "^2.3.3",
+    "react-phone-number-input": "^3.2.11"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.7",
