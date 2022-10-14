@@ -37,7 +37,7 @@ export default function Index() {
      }
      const mydata = newdata.sort()
      setName(mydata)
-  },[])
+  })
     
   const Makeadonation = ()=>(
     <div>
