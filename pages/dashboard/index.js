@@ -24,9 +24,9 @@ export default function Index(){
                         {/* <TableCaption>Imperial to metric conversion factors</TableCaption> */}
                         <Thead>
                         <Tr>
-                            <Th>To convert</Th>
-                            <Th>into</Th>
-                            <Th isNumeric>multiply by</Th>
+                            <Th>ID</Th>
+                            <Th>NAME</Th>
+                            {/* <Th isNumeric>multiply by</Th> */}
                         </Tr>
                         </Thead>
                         <Tbody>

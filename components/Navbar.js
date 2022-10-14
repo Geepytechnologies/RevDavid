@@ -14,7 +14,6 @@ import { AiFillYoutube } from 'react-icons/ai'
 
 export default function Navbar(props) {
     const router = useRouter();
-    const transnav = useRef();
     const socials = useRef();
     const wrapper = useRef();
     const logo = useRef();
@@ -23,56 +22,26 @@ export default function Navbar(props) {
     const close = useRef();
     const show = () => {
         const solid = window.scrollY > 50
-        document.body.style.overflow = 'hidden';
         menu.current.style.display = 'none';
         close.current.style.display = 'flex';
         side.current.style.maxHeight = 'calc(100vh - 10px)';
         side.current.style.borderBottom = '1px solid rgba(255, 255, 255, 0.3)';
-        transnav.current.classList.add('solidnav')
-            socials.current.classList.add('text-[#9b0000]')
-            wrapper.current.classList.remove('bg-[#9b0000]')
-            wrapper.current.classList.add('bg-[white]')
-            logo.current.style.color = "#bfccd4";
+            
         
     }
     const hide = () => {
-        document.body.style.overflow = 'scroll';
         menu.current.style.display = 'flex';
         close.current.style.display = 'none';
         side.current.style.maxHeight = '0px';
         side.current.style.borderBottom = '0px';
         side.current.style.borderTop = '0px';
     }
-    useEffect(()=>{
-       const handleScroll = ()=>{
-        const solid = window.scrollY > 50
-        if(solid){
-            transnav.current.classList.add('solidnav')
-            socials.current.classList.add('text-[#9b0000]')
-            wrapper.current.classList.remove('bg-[#9b0000]')
-            wrapper.current.classList.add('bg-[white]')
-            logo.current.style.color = "#bfccd4";
-            
-        }else {
-            transnav.current.classList.remove('solidnav')
-            socials.current.classList.remove('text-[#9b0000]')
-            socials.current.classList.add('text-[#bfccd4]')
-            wrapper.current.classList.add('bg-[#9b0000]')
-            logo.current.style.color = "#9b0000"
-            
-        }
-       }
-       document.addEventListener('scroll', handleScroll)
-       return ()=>{
-        document.removeEventListener('scroll',handleScroll)
-       }
-    },[])
   return (
     <>
-      <div ref={transnav} className='transnav'>
+      <div className='solidnav'>
             {/* logo section */}
             <div onClick={()=>{router.push('/')}} className='flex items-center basis-[70%] sm:basis-[50%] md:basis-[30%] lg:[25%]'>
-                <p ref={logo} className='font-allura pl-[5px] font-[700] text-[20px] sm:text-[30px] text-[#9b0000] '>Rev David Akanwa</p>
+                <p ref={logo} className='font-allura pl-[5px] font-[700] text-[20px] sm:text-[30px] text-[white] '>Rev David Akanwa</p>
             </div>
             {/* end of logo section */}
             {/* menu section */}

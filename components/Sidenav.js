@@ -5,6 +5,7 @@ import {FaHome,FaBloggerB } from 'react-icons/fa'
 import {MdMiscellaneousServices } from "react-icons/md";
 import { IoIosContacts } from "react-icons/io";
 import Link from 'next/link';
+import {useRouter} from 'next/router'
 
 export default function Sidenav() {
   return (

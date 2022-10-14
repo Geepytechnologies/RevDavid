@@ -27,7 +27,8 @@ export default function Index() {
     </div>
   )
   useEffect(()=>{
-     const countries = fetch('https://restcountries.com/v3.1/all')
+    const url = "https://restcountries.com/v3.1/all"
+     fetch(url,{method: "Get",mode:"cors"})
      .then((response)=>response.json())
      .then((data)=>setCountry(data))
      const newdata = []
