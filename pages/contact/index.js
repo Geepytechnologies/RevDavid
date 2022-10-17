@@ -1,4 +1,4 @@
-import React,{useEffect,useState,useMemo} from 'react'
+import React,{useEffect,useState,useMemo, useCallback} from 'react'
 import Header from '../../components/Header'
 import Navbar from '../../components/Navbar'
 import Footer from '../../components/Footer'
@@ -8,12 +8,22 @@ import PhoneInput from 'react-phone-number-input'
 import { GridItem } from '@chakra-ui/react';
 
 
-export default function Index() {
+
+export default function Index({countries}) {
   const { register, handleSubmit, formState: {errors} } = useForm();
   const [country, setCountry] = useState([]);
   const [selectedcountry,setSelectedcountry] = useState('Nigeria')
   const [name, setName] = useState([]);
   const [value, setValue] = useState();
+  const url = `https://www.google.com/maps/embed/v1/place?key=AIzaSyCfRPpHvF9GWWeNa4c5_LJiCGXHc190x00&q=Intimate+vessels+church,awka+nigeria`;
+//  const country = countries;
+ /*  const newdata = []
+  for (let i in country){
+    newdata.push(country[i].name.common)
+  }
+  const mydata = newdata.sort() */
+  // setName(mydata)
+  // console.log(countries)
   const onSubmit = data => console.log(data);
   const Contactheader = ()=>(
     <div className=" bg-[url('/img-3.jpg')] h-[400px] w-[100%] bg-cover relative ">
@@ -26,18 +36,23 @@ export default function Index() {
         </div>
     </div>
   )
-  useEffect(()=>{
+  async function getcountries(){
     const url = "https://restcountries.com/v3.1/all"
-     fetch(url,{method: "Get",mode:"cors"})
-     .then((response)=>response.json())
-     .then((data)=>setCountry(data))
+    const res = await fetch(url,{method: "Get",mode:"cors"})
+    const data = await res.json()
+    setCountry(data);
      const newdata = []
      for (let i in country){
        newdata.push(country[i].name.common)
      }
      const mydata = newdata.sort()
-     setName(mydata)
-  })
+     setName(mydata) 
+  }
+  useEffect(()=>{
+   getcountries()
+  },[]) 
+
+ 
     
   const Makeadonation = ()=>(
     <div>
@@ -47,7 +62,7 @@ export default function Index() {
       </div>
     </div>
   )
-   const Map = ()=>(
+   const Map = useCallback(()=>(
     <div className='w-[90vw] mb-[10px] flex items-center justify-center '>
     <div className='w-[90%] h-[auto] flex items-center justify-center '>
         <iframe className='w-[90%] h-[450px] border-2 border-[#e6e6e6] '
@@ -57,12 +72,12 @@ export default function Index() {
           loading="lazy"
           allowFullScreen
           referrerPolicy="no-referrer-when-downgrade"
-          src="https://www.google.com/maps/embed/v1/place?key=AIzaSyCfRPpHvF9GWWeNa4c5_LJiCGXHc190x00
-            &q=Intimate+vessels+church,awka+nigeria">
+  src = "https://www.google.com/maps/embed/v1/place?key=AIzaSyCfRPpHvF9GWWeNa4c5_LJiCGXHc190x00&q=Intimate+vessels+church,awka+nigeria"
+            >
         </iframe>
     </div>
     </div>
-   )
+   ),[])
     
   return (
     <div className='relative'>
@@ -89,10 +104,10 @@ export default function Index() {
           </div>
           <div className="flex flex-col">
             <label>Country</label>
-            <select {...register("country")} onChange={(e)=>setSelectedcountry(e.currentTarget.value)} >
+            <select selected="Nigeria" {...register("country")} onChange={(e)=>setSelectedcountry(e.currentTarget.value)} >
               {
                 name.map((item,index)=>(
-                  <option  key={index}>{item}</option>
+                  <option value={item} key={index}>{item}</option>
                 ))
               }
             </select>
@@ -129,3 +144,4 @@ export default function Index() {
     </div>
   )
 }
+

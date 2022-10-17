@@ -13,27 +13,27 @@ export default function Sidenav() {
         <div className='text-white flex flex-col justify-around w-[100vw]'>
             <div className='flex ml-[4px] flex-row items-center cursor-pointer w-[70%] hover:scale-[1.02]  py-[5px] rounded-r-lg my-[10px]'>
                 <div className='mr-[5px]'><FaHome style={{fill: '#9b0000'}}/></div>
-                <div><Link href='/'><a>Home</a></Link></div>
+                <div><Link href='/'>Home</Link></div>
             </div>
             <div className='flex ml-[4px] flex-row items-center cursor-pointer w-[70%] hover:scale-[1.02]  py-[5px] rounded-r-lg my-[10px]'>
                 <div className='mr-[5px]'><MdMiscellaneousServices style={{fill: '#9b0000'}}/></div>
-                <div className=''><Link href='/about'><a>About</a></Link></div>
+                <div className=''><Link href='/about'>About</Link></div>
             </div>
             <div className='flex ml-[4px] flex-row items-center cursor-pointer w-[70%] hover:scale-[1.02] py-[5px] rounded-r-lg my-[10px]'>
                 <div className='mr-[5px]'><AiFillContacts style={{fill: '#9b0000'}}/></div>
-                <div><Link href='/media'><a>Media</a></Link></div>
+                <div><Link href='/media'>Media</Link></div>
             </div>
             <div className='flex ml-[4px] flex-row items-center cursor-pointer w-[70%] hover:scale-[1.02] py-[5px] rounded-r-lg my-[10px]'>
                 <div className='mr-[5px]'><IoIosContacts style={{fill: '#9b0000'}}/></div>
-                <div className=''><Link href='/events'><a>Events</a></Link></div>
+                <div className=''><Link href='/events'>Events</Link></div>
             </div>
             <div className='flex ml-[4px] flex-row items-center cursor-pointer w-[70%] hover:scale-[1.02]  py-[5px] rounded-r-lg my-[10px]'>
                 <div className='mr-[5px]'><FaBloggerB style={{fill: '#9b0000'}}/></div>
-                <div><Link href='/blog'><a>Blog</a></Link></div>
+                <div><Link href='/blog'>Blog</Link></div>
             </div>
             <div className='flex ml-[4px] flex-row items-center cursor-pointer w-[70%] hover:scale-[1.02]  py-[5px] rounded-r-lg my-[10px]'>
                 <div className='mr-[5px]'><FaBloggerB style={{fill: '#9b0000'}}/></div>
-                <div><Link href='/contact'><a>Contact</a></Link></div>
+                <div><Link href='/contact'>Contact</Link></div>
             </div>
         </div>
         <div>
