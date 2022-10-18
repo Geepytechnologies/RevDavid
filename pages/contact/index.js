@@ -5,25 +5,15 @@ import Footer from '../../components/Footer'
 import { useForm } from "react-hook-form";
 import 'react-phone-number-input/style.css'
 import PhoneInput from 'react-phone-number-input'
+import { country } from '../../data/country';
 import { GridItem } from '@chakra-ui/react';
 
 
 
-export default function Index({countries}) {
+export default function Index() {
   const { register, handleSubmit, formState: {errors} } = useForm();
-  const [country, setCountry] = useState([]);
-  const [selectedcountry,setSelectedcountry] = useState('Nigeria')
-  const [name, setName] = useState([]);
+  const [selectedcountry,setSelectedcountry] = useState('Afghanistan')
   const [value, setValue] = useState();
-  const url = `https://www.google.com/maps/embed/v1/place?key=AIzaSyCfRPpHvF9GWWeNa4c5_LJiCGXHc190x00&q=Intimate+vessels+church,awka+nigeria`;
-//  const country = countries;
- /*  const newdata = []
-  for (let i in country){
-    newdata.push(country[i].name.common)
-  }
-  const mydata = newdata.sort() */
-  // setName(mydata)
-  // console.log(countries)
   const onSubmit = data => console.log(data);
   const Contactheader = ()=>(
     <div className=" bg-[url('/img-3.jpg')] h-[400px] w-[100%] bg-cover relative ">
@@ -36,21 +26,7 @@ export default function Index({countries}) {
         </div>
     </div>
   )
-  async function getcountries(){
-    const url = "https://restcountries.com/v3.1/all"
-    const res = await fetch(url,{method: "Get",mode:"cors"})
-    const data = await res.json()
-    setCountry(data);
-     const newdata = []
-     for (let i in country){
-       newdata.push(country[i].name.common)
-     }
-     const mydata = newdata.sort()
-     setName(mydata) 
-  }
-  useEffect(()=>{
-   getcountries()
-  },[]) 
+ 
 
  
     
@@ -104,9 +80,9 @@ export default function Index({countries}) {
           </div>
           <div className="flex flex-col">
             <label>Country</label>
-            <select selected="Nigeria" {...register("country")} onChange={(e)=>setSelectedcountry(e.currentTarget.value)} >
+            <select selected="Nigeria" {...register("country",{required: true})} onChange={(e)=>setSelectedcountry(e.currentTarget.value)} >
               {
-                name.map((item,index)=>(
+                country.map((item,index)=>(
                   <option value={item} key={index}>{item}</option>
                 ))
               }
