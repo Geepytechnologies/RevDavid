@@ -1,4 +1,4 @@
-import React, {useRef, useState} from 'react'
+import React, {useEffect, useRef, useState} from 'react'
 import Header from '../../components/Header'
 import Navbar from '../../components/Navbar'
 import Footer from '../../components/Footer'
@@ -41,6 +41,7 @@ export default function Index() {
     strokeWidth: "5"
   }
   const [loading, setLoading] = useState(true);
+  const [playlist, setPlaylist] = useState('')
   const search = useRef();
   const video = useRef();
   const theimage = useRef();
@@ -57,6 +58,18 @@ export default function Index() {
     </div>
   );
   // https://www.youtube.com/watch?v=W8UsgDOk8Aw
+  const url = "https://youtube.googleapis.com/youtube/v3/playlists?part=snippet%2CcontentDetails%2Cid%2C%20player&channelId=UCNU64bSdhSdlMfBfHNQP79g&maxResults=25&key=AIzaSyCfRPpHvF9GWWeNa4c5_LJiCGXHc190x00";
+
+  const LoadVideos = async ()=>{
+    await fetch(url)
+    .then((response)=>response.json())
+    .then((data) => setPlaylist(data))
+  }
+
+  useEffect(()=>{
+     LoadVideos();
+     console.log(playlist)
+  },[])
   const VideoGallery = ()=> (
     <div className='mb-[50px]'>
       <p className='font-[600] text-[35px] text-center '>Videos</p>
@@ -69,6 +82,7 @@ export default function Index() {
           {/* <ReactPlayer onReady={()=>setLoading(false)} controls pip={true} url='http://www.youtube.com/watch?v=W8UsgDOk8Aw' height='100%' width='100%' className='absolute top-0' /> */}
           {/* <p>Title</p> */}
         </div>
+        {/* <div>{playlist}</div> */}
       </div>
     </div>
   )
@@ -91,13 +105,13 @@ export default function Index() {
           <Image src='/podcast-soundcloud.png' alt='img3' layout='responsive' width="100%" height="100%" objectFit='contain' />
         </div>
         <div className='bg-[white] rounded-lg h-[100%] w-[100%]  relative'>
-          <Image src='/Spotify_logo.png' alt='img3' layout='responsive' width="100%" height="100%" objectFit='contain'/>
+          <Image src='/podcast-soundcloud.png' alt='img3' layout='responsive' width="100%" height="100%" objectFit='contain'/>
         </div>        
         <div className='bg-[white] rounded-lg h-[100%] w-[100%]  relative'>
-          <Image src='/applepodcast.png' alt='img2' layout='responsive' width="100%" height="100%" objectFit='contain'  />
+          <Image src='/podcast-soundcloud.png' alt='img2' layout='responsive' width="100%" height="100%" objectFit='contain'  />
         </div>        
         <div className='bg-[white] rounded-lg h-[100%] w-[100%]  relative'>
-          <Image src='/audiomack.png' alt='img' layout='responsive' width="100%" height="100%" objectFit='contain' />
+          <Image src='/podcast-soundcloud.png' alt='img' layout='responsive' width="100%" height="100%" objectFit='contain' />
         </div>
       </div>
     </div>

@@ -19,7 +19,6 @@ import Link from 'next/link';
 
 const Owl = dynamic(()=> import("react-owl-carousel"),{ssr:false});
 export default function About() {
-  const [loaded,setLoaded] = useState(false)
   const settings = {
     items: 1,
     autoplay: true,
@@ -36,11 +35,11 @@ export default function About() {
     <div className='relative'>
           <Owl className='owl-theme' loop  {...settings} >
             <div className='item w-[100%] md:h-[500px] relative'>
-                <Image src='/go9.jpg' alt="RevDavid" priority="true" layout='responsive' height='100%' width='100%' objectFit='cover' objectPosition="50% 50%" onLoadingComplete={()=>setLoaded(true)}   />
-                {loaded === true ? <div className='absolute top-0 overlay'></div> : null}
-                {loaded === true ? <div className='w-[100%] h-[100%] absolute top-[0px] flex flex-col items-center justify-center '>
+                <Image src='/go9.jpg' alt="RevDavid" priority="true" layout='responsive' height='100%' width='100%' objectFit='cover' objectPosition="50% 50%"   />
+                 <div className='absolute top-0 overlay'></div>
+                <div className='w-[100%] h-[100%] absolute top-[0px] flex flex-col items-center justify-center '>
                   <p className='line text-center text-white md:text-[50px] text-[25px]'>Preaching the</p> <span className='text-[28px] md:text-[60px] text-center text-white font-[700] line2 '>word of Faith</span>
-                </div> : null}
+                </div>
             </div>
             <div className='item  w-[100%] md:h-[500px] relative'>
                 <Image src='/go4.jpg' alt="RevDavid" priority="true"  layout='responsive' height='100%' width='100%' objectFit='cover' objectPosition="50% 50%"  />
@@ -63,8 +62,8 @@ export default function About() {
               <div className='text-white text-[17px] font-[400] '>Stream Live</div>
            </div>
             <div className='flex flex-row  min-w-[40%] sm:w-[20%] items-center justify-around p-[5px]'>
-              <Link href=''><AiFillYoutube className=' text-[30px] sm:text-[40px] border-2 border-white rounded-lg p-[5px] bg-[red] text-[white]' /></Link>
-              <Link href=''><FaFacebookF className='text-[30px] sm:text-[40px] text-[white] border-2 border-white rounded-lg p-[5px] bg-[blue]' /></Link>
+              <AiFillYoutube className=' text-[30px] sm:text-[40px] border-2 border-white rounded-lg p-[5px] bg-[red] text-[white]' />
+              <FaFacebookF className='text-[30px] sm:text-[40px] text-[white] border-2 border-white rounded-lg p-[5px] bg-[blue]' />
             </div>
         </div>
     </div>

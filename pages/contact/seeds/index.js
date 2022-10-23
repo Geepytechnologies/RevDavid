@@ -80,11 +80,17 @@ const Mypaypal = useCallback(()=>{
   return (
     <div>
        <Header />
+       <div className='h-[100vh]'>
+       <div className='min-h-[100%] w-[100%] relative'>
        <Navbar />
        <div className='my-[70px]'>
          <Mypaypal />
         </div>
-       <Footer />
+        <div className='bottom-[0px] absolute w-[100%]'>
+            <Footer />
+        </div> 
+        </div> 
+        </div> 
     </div>
   )
 }

@@ -22,7 +22,6 @@ export default function Navbar(props) {
     const menu = useRef();
     const close = useRef();
     const show = () => {
-        const solid = window.scrollY > 50
         menu.current.style.display = 'none';
         close.current.style.display = 'flex';
         side.current.style.maxHeight = 'calc(100vh - 10px)';
@@ -41,13 +40,13 @@ export default function Navbar(props) {
     <>
       <div className='solidnav'>
             {/* logo section */}
-            <div onClick={()=>{router.push('/')}} className='flex flex-row items-center basis-[70%] sm:basis-[50%] md:basis-[30%] pl-[4px] lg:[25%]'>
-                <BsBook className='text-[20px] mr-[3px]' />
+            <div onClick={()=>{router.push('/')}} className='flex flex-row items-center basis-[70%] sm:basis-[50%] md:basis-[40%] pl-[4px] lg:[25%]'>
+                <BsBook className='text-[20px] mr-[5px]' />
                 <p ref={logo} className='font-allura pl-[5px] font-[700] text-[20px] sm:text-[30px] text-[white] '>Rev David Akanwa</p>
             </div>
             {/* end of logo section */}
             {/* menu section */}
-            <div className='basis-[30%] hidden md:block md:basis-[70%] lg:basis-[50%]'>
+            <div className='basis-[30%] hidden lg:block md:basis-[70%] lg:basis-[50%]'>
                 <div className=''>
                     <ul className='flex justify-around text-[white]  text-[19px] '>
                             <li className='dtext inline cursor-pointer font-[poppins]'><Link href='/'><a>Home</a></Link></li>
@@ -89,15 +88,15 @@ export default function Navbar(props) {
             </div>
             {/* end of social icons */}
             {/* menu icon */}
-            <div ref={menu} onClick={show} className='flex justify-end basis-[50%] cursor-pointer sm:basis-[50%] text-[25px] pr-[10px] md:!hidden'>
+            <div ref={menu} onClick={show} className='flex justify-end basis-[50%] cursor-pointer sm:basis-[50%] text-[30px] pr-[10px] lg:!hidden'>
                 <FaBars className='border-2 text-white  rounded-md p-[4px]' /> 
             </div>
-            <div ref={close} onClick={hide} className='basis-[50%] hidden cursor-pointer sm:basis-[50%] text-[25px] pr-[10px] flex justify-end  md:!hidden'>
+            <div ref={close} onClick={hide} className='basis-[50%] hidden cursor-pointer sm:basis-[50%] text-[30px] pr-[10px] flex justify-end  lg:!hidden'>
                 <RiCloseCircleLine style={{fill: 'white'}} />
             </div>
             {/* end of menu icon */}
         </div>
-        <div ref={side} className='w-[100vw] md:w-[50vw] fixed sidenav  border-none  top-[90px] text-white right-[0px] overflow-hidden sidenavglass max-h-[0px] md:!hidden transition-[max-height] duration-500 ease-in-out'><Sidenav /></div>
+        <div ref={side} className='w-[100vw] md:w-[50vw] fixed sidenav  border-none  top-[90px] text-white right-[0px] overflow-hidden sidenavglass max-h-[0px] lg:!hidden transition-[max-height] duration-500 ease-in-out'><Sidenav /></div>
     {/* solid navbar */}
     
     </>

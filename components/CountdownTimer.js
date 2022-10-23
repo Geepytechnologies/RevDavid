@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 
-const CountdownTimer = (props) => {
+const CountdownTimer = ({countDownDate}) => {
     const [expired, setExpired] = useState(false);
     const [time, setTime] = useState({
         days: 0,
@@ -9,7 +9,7 @@ const CountdownTimer = (props) => {
         seconds: 0
     })
     // Set the date we're counting down to
-var countDownDate = new Date(props.countDownDate).getTime();
+var countDownDate = new Date(countDownDate).getTime();
 
 // Update the count down every 1 second
 var x = setInterval(function() {

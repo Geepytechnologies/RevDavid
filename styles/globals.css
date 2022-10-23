@@ -76,15 +76,13 @@ a {
 }
 .image{
   background-image: url('/go8.jpg');
-  height: auto;
+  /* height: auto; */
   background-attachment: fixed;
   background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  /* background-repeat: no-repeat; */
+  /* background-size: cover; */
 }
-/* .mynav{
-  background-color: red;
-} */
+
 .overlay{
   opacity: 0.4;
   height: 100%;
@@ -116,6 +114,7 @@ a {
   border-bottom: 2px solid white;
   display: flex;
   align-items: center;
+  justify-content: space-around;
   top: 0px;
 }
 .theimage:hover + .book{
@@ -137,7 +136,7 @@ background: linear-gradient(90deg, rgba(21,37,91,1) 0%, rgba(0,212,255,1) 100%);
 }
 .sidenav{
   /* background-color: #935427; */
-  background-color: #12131e;
+  background-color: #41648d;
   z-index: 999;
   height: calc(100vh - 90px)
 }
