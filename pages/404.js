@@ -15,7 +15,7 @@ export default function Custom404() {
                 <div className='text-center py-[20px]'>
                     <h1 className="text-[50px] font-[700]">Oops!!!</h1>
                     <h2 className='font-[600]'>404 - PAGE NOT FOUND</h2>
-                    <h2 className=''>The page you are looking for might have been removed, had its name changed or it's temporarily unavailable</h2>
+                    <h2 className=''>The page you are looking for might have been removed, had its name changed or it&apos;s temporarily unavailable</h2>
                     <button className='bg-[#9b0000] my-[10px] text-[white] py-[10px] px-[15px]' onClick={()=>Router.push('/')}>Go to Homepage</button>
                 </div>
             </div>
