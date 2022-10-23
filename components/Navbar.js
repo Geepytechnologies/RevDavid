@@ -9,6 +9,7 @@ import 'animate.css';
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { AiFillYoutube } from 'react-icons/ai'
+import { BsBook } from 'react-icons/bs'
 
 
 
@@ -40,7 +41,8 @@ export default function Navbar(props) {
     <>
       <div className='solidnav'>
             {/* logo section */}
-            <div onClick={()=>{router.push('/')}} className='flex items-center basis-[70%] sm:basis-[50%] md:basis-[30%] lg:[25%]'>
+            <div onClick={()=>{router.push('/')}} className='flex flex-row items-center basis-[70%] sm:basis-[50%] md:basis-[30%] pl-[4px] lg:[25%]'>
+                <BsBook className='text-[20px] mr-[3px]' />
                 <p ref={logo} className='font-allura pl-[5px] font-[700] text-[20px] sm:text-[30px] text-[white] '>Rev David Akanwa</p>
             </div>
             {/* end of logo section */}
@@ -59,7 +61,7 @@ export default function Navbar(props) {
                             <li className='dtext inline  cursor-pointer font-[poppins]'><Link href='/blog'><a>Blog</a></Link>
                             </li>
                             
-                            <li className='dtext inline  cursor-pointer font-rob'><Link href='/'><a>Contact</a></Link></li>
+                            <li className='dtext inline  cursor-pointer font-rob'><Link href='/contact'><a>Contact</a></Link></li>
                             
                     </ul>
                 </div>
@@ -95,7 +97,7 @@ export default function Navbar(props) {
             </div>
             {/* end of menu icon */}
         </div>
-        <div ref={side} className='w-[70vw] fixed sidenav  border-none  top-[90px] text-white right-[0px] overflow-hidden sidenavglass max-h-[0px] h-[100vh] md:!hidden transition-[max-height] duration-500 ease-in-out'><Sidenav /></div>
+        <div ref={side} className='w-[100vw] md:w-[50vw] fixed sidenav  border-none  top-[90px] text-white right-[0px] overflow-hidden sidenavglass max-h-[0px] md:!hidden transition-[max-height] duration-500 ease-in-out'><Sidenav /></div>
     {/* solid navbar */}
     
     </>

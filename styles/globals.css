@@ -86,11 +86,11 @@ a {
   background-color: red;
 } */
 .overlay{
-  opacity: 0.3;
+  opacity: 0.4;
   height: 100%;
   width: 100%;
-  /* background: rgb(13,20,49); */
-background: linear-gradient(rgba(13,20,49,1), rgba(107,122,154,1))
+  background: rgb(13,20,49);
+/* background: linear-gradient(rgba(13,20,49,1), rgba(107,122,154,1)) */
 }
 .sliderscale{
   transform: scale(0.5,1);
@@ -136,11 +136,10 @@ background: linear-gradient(90deg, rgba(21,37,91,1) 0%, rgba(0,212,255,1) 100%);
 
 }
 .sidenav{
-  background-color: rgba(0, 0, 0,0.4);
+  /* background-color: #935427; */
+  background-color: #12131e;
   z-index: 999;
-  /* background: rgb(21,37,91);
-  background: linear-gradient(90deg, rgba(21,37,91,1) 0%, rgba(0,212,255,1) 100%); */
-  opacity: 0.95;
+  height: calc(100vh - 90px)
 }
 .bg{
   background-color: #9b0000;

@@ -32,29 +32,26 @@ export default function About() {
       "<p class='mynav bg-[rgba(0,0,0,0.6)] rounded-sm font-[700] text-[20px] m-[5px] py-[3px] px-[12px] text-white absolute top-[50%] right-0' aria-hidden='true'>&#62;</p>",
     ]
   }
-  const say = ()=>{
-    setLoaded(true);
-  }
   return (
     <div className='relative'>
           <Owl className='owl-theme' loop  {...settings} >
             <div className='item w-[100%] md:h-[500px] relative'>
-                <Image src='/go9.jpg' alt="RevDavid" priority="true" layout='responsive' height='100%' width='100%' objectFit='cover' objectPosition="50% 50%" onLoadingComplete={say}   />
-                {loaded == true && <div className='absolute top-0 overlay'></div>}
-                {loaded == true && <div className='w-[100%] h-[100%] absolute top-[0px] flex flex-col items-center justify-center '>
+                <Image src='/go9.jpg' alt="RevDavid" priority="true" layout='responsive' height='100%' width='100%' objectFit='cover' objectPosition="50% 50%" onLoadingComplete={()=>setLoaded(true)}   />
+                {loaded === true ? <div className='absolute top-0 overlay'></div> : null}
+                {loaded === true ? <div className='w-[100%] h-[100%] absolute top-[0px] flex flex-col items-center justify-center '>
                   <p className='line text-center text-white md:text-[50px] text-[25px]'>Preaching the</p> <span className='text-[28px] md:text-[60px] text-center text-white font-[700] line2 '>word of Faith</span>
-                </div>}
+                </div> : null}
             </div>
             <div className='item  w-[100%] md:h-[500px] relative'>
                 <Image src='/go4.jpg' alt="RevDavid" priority="true"  layout='responsive' height='100%' width='100%' objectFit='cover' objectPosition="50% 50%"  />
-                {/* <div className='absolute top-0 overlay'></div> */}
+                <div className='absolute top-0 overlay'></div>
                 <div className='w-[100%] h-[100%] flex-col absolute top-[0px] flex items-center justify-center '>
                 <p className='line text-center text-white md:text-[50px] text-[25px]'>Intimacy in</p> <span className='text-[28px] md:text-[60px] text-center text-white font-[700] line2 '>God&apos;s presence</span>
                 </div>
             </div>
             <div className='item  w-[100%] md:h-[500px] relative'>
                 <Image src='/go10.jpg' alt="RevDavid" priority="true"  layout='responsive' height='100%' width='100%' objectFit='cover' objectPosition="50% 50%"    />
-                {/* <div className='absolute top-0 overlay'></div> */}
+                <div className='absolute top-0 overlay'></div>
                 <div className='w-[100%] h-[100%] absolute flex-col top-[0px] flex items-center justify-center '>
                   <p className='line text-center text-white md:text-[50px] text-[25px]'>God&apos;s Divine</p><span className='text-[28px] text-center text-white font-[700] md:text-[60px] line2 '>Purpose</span>
                 </div>

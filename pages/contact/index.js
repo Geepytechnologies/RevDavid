@@ -7,15 +7,32 @@ import 'react-phone-number-input/style.css'
 import PhoneInput from 'react-phone-number-input'
 import { country } from '../../data/country';
 import { GridItem } from '@chakra-ui/react';
+import Image from 'next/image';
+import {
+  Modal,
+  ModalOverlay,
+  ModalContent,
+  ModalHeader,
+  ModalFooter,
+  ModalBody,
+  ModalCloseButton,
+  useDisclosure,
+  Button
+} from '@chakra-ui/react'
+import Seeds from '../../components/Seeds';
+import Passion5 from '../../components/Passion5';
+
+
 
 
 
 export default function Index() {
+  const { isOpen, onOpen, onClose } = useDisclosure()
   const { register, handleSubmit, formState: {errors} } = useForm();
   const [selectedcountry,setSelectedcountry] = useState('Afghanistan')
   const [value, setValue] = useState();
   const onSubmit = data => console.log(data);
-  const Contactheader = ()=>(
+  const Contactheader = useCallback(()=>(
     <div className=" bg-[url('/img-3.jpg')] h-[400px] w-[100%] bg-cover relative ">
         <div className='absolute top-0 overlay'></div>
         <div className='w-[100%] absolute left-0 bottom-[50px] h-[80px]'>
@@ -25,17 +42,15 @@ export default function Index() {
           </div>
         </div>
     </div>
-  )
+  ),[])
  
 
  
     
   const Makeadonation = ()=>(
-    <div>
-      <div>
-        <h2>Giving</h2>
-       
-      </div>
+    <div className='flex flex-col md:flex-row w-[100vw] items-center justify-around mb-[70px]'>
+      <Seeds />
+      <Passion5 />
     </div>
   )
    const Map = useCallback(()=>(
@@ -56,12 +71,12 @@ export default function Index() {
    ),[])
     
   return (
+    
     <div className='relative'>
        <Header />
        <Navbar />
        <Contactheader />
-       {/* <Contactheader /> */}
-       <div className='w-[100%] flex items-center justify-center '>
+       <div className='w-[100%] mt-[20px] flex items-center justify-center '>
        <div className=' flex flex-col h-[auto] p-[10px] w-[100%] md:w-[70%]  '>
          <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col h-[100%] " >
           <div className="flex flex-col">
@@ -114,6 +129,7 @@ export default function Index() {
          </form>
        </div>
        </div>
+       
        <Makeadonation />
        <Map />
        <Footer />

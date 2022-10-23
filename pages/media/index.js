@@ -86,20 +86,20 @@ export default function Index() {
   const AudioMessages = ()=>(
     <div className='flex flex-col items-center'>
       <p className='font-[600] text-[35px] text-center '>Audio Streaming</p>
-      {/* <div className='grid gap-2 grid- grid-cols-2 md:grid-cols-4 justify-between footer w-[90%] md:w-[80%] h-[200px] p-[20px] '>
-        <div className='bg-[white] rounded-lg h-[100%] w-[150px] md:w-[250px] relative'>
-          <Image src='/podcast-soundcloud.png' alt='img3' layout='fill' />
+      <div className='grid gap-2 grid-cols-2 md:grid-cols-4 justify-between footer w-[90%] md:w-[80%]  p-[20px] '>
+        <div className='bg-[white] rounded-lg h-[100%] w-[100%] relative'>
+          <Image src='/podcast-soundcloud.png' alt='img3' layout='responsive' width="100%" height="100%" objectFit='contain' />
         </div>
-        <div className='bg-[white] rounded-lg h-[100%] w-[150px] md:w-[250px] relative'>
-          <Image src='/Spotify_logo.png' alt='img3' layout='fill' />
+        <div className='bg-[white] rounded-lg h-[100%] w-[100%]  relative'>
+          <Image src='/Spotify_logo.png' alt='img3' layout='responsive' width="100%" height="100%" objectFit='contain'/>
         </div>        
-        <div className='bg-[white] rounded-lg h-[100%] w-[150px] md:w-[250px] relative'>
-          <Image src='/applepodcast.png' alt='img2' layout='fill'  />
+        <div className='bg-[white] rounded-lg h-[100%] w-[100%]  relative'>
+          <Image src='/applepodcast.png' alt='img2' layout='responsive' width="100%" height="100%" objectFit='contain'  />
         </div>        
-        <div className='bg-[white] rounded-lg h-[100%] w-[150px] md:w-[250px] relative'>
-          <Image src='/audiomack.png' alt='img' layout='fill' />
+        <div className='bg-[white] rounded-lg h-[100%] w-[100%]  relative'>
+          <Image src='/audiomack.png' alt='img' layout='responsive' width="100%" height="100%" objectFit='contain' />
         </div>
-      </div> */}
+      </div>
     </div>
   )
   return (

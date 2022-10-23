@@ -55,12 +55,20 @@ export default function Index() {
        <Eventsheader />
        {/* Events section */}
         <div className=''>
-          <div className='flex flex-col items-center justify-center' >
+          <div className='flex flex-col  items-center justify-center pb-[30px] w-[100%]' >
             <h2>Upcoming Events</h2>
-            <div className='example w-[90%] md:w-[80%]'>
-            <Owl className='owl-theme' loop {...settings} >
-              <div className='w-[300px] h-[300px] relative'>
-                <Image src='/bgg2.jpg' alt="" layout='fill' className='rounded-xl' />
+            <div className=' flex flex-row w-[90%] overflow-x-scroll '>
+              <div className='min-w-[80%] md:min-w-[70%] mr-[10px] rounded-xl  relative'>
+                <Image src='/bgg2.jpg' alt="" layout='responsive' width="100%" height="100%" className='rounded-xl' objectFit='cover' />
+                <div className='opacity-0 rounded-xl hover:opacity-100 bg-[rgba(0,0,0,0.6)] h-[100%] w-[100%] absolute top-0 flex flex-col items-center justify-center '>
+                  <FcLock className='text-[40px]' />
+                  <div className='flex flex-row items-center justify-center' >
+                    <GiAlarmClock className='text-white text-[35px] ' /><CountdownTimer countDownDate="Jan 5, 2024 15:37:25" />
+                  </div>
+                </div>
+              </div>
+              <div className='min-w-[80%] md:min-w-[70%] rounded-xl relative'>
+                <Image src='/bgg2.jpg' alt="" layout='responsive' width="100%" height="100%" className='rounded-xl' objectFit='cover' />
                 <div className='opacity-0 rounded-xl hover:opacity-100 bg-[rgba(0,0,0,0.6)] h-[100%] w-[100%] absolute top-0 flex flex-col items-center justify-center '>
                   <FcLock className='text-[40px]' />
                   <div className='flex flex-row' >
@@ -68,29 +76,20 @@ export default function Index() {
                   </div>
                 </div>
               </div>
-              <div className='w-[300px] h-[300px] relative '>
-                <Image src='/img-2.jpg' alt="" layout='fill' className='rounded-xl'  />
+              <div className='min-w-[80%] md:min-w-[70%] rounded-xl  relative'>
+                <Image src='/bgg2.jpg' alt="" layout='responsive' width="100%" height="100%" className='rounded-xl' objectFit='cover' />
+                <div className='opacity-0 rounded-xl hover:opacity-100 bg-[rgba(0,0,0,0.6)] h-[100%] w-[100%] absolute top-0 flex flex-col items-center justify-center '>
+                  <FcLock className='text-[40px]' />
+                  <div className='flex flex-row' >
+                  <GiAlarmClock className='text-white text-[35px] ' /><CountdownTimer countDownDate="Jan 5, 2024 15:37:25" />
+                  </div>
+                </div>
               </div>
-              <div className='w-[300px] h-[300px] relative '>
-                <Image src='/img-3.jpg' alt="" layout='fill' className='rounded-xl' />
-              </div>
-              <div className='w-[300px] h-[300px] relative '>
-                <Image src='/img-3.jpg' alt="" layout='fill' className='rounded-xl' />
-              </div>
-              <div className='w-[300px] h-[300px] relative '>
-                <Image src='/img-3.jpg' alt="" layout='fill' className='rounded-xl' />
-              </div>
-              <div className='w-[300px] h-[300px] relative '>
-                <Image src='/img-3.jpg' alt="" layout='fill' className='rounded-xl' />
-              </div>
-            </Owl>
             </div>
           </div>
-          <div>
           <div className='flex flex-col items-center justify-center' >
             <h2>Most Recent Events</h2>
             <div className='example w-[90%] md:w-[80%]'>
-            {/* <Owl className='owl-theme' loop {...settings} >
               <div className='w-[250px] h-[250px] relative '>
                 <Image src='/img-1.jpg' alt="" layout='fill' />
               </div>
@@ -103,9 +102,7 @@ export default function Index() {
               <div className='w-[250px] h-[250px] relative '>
                 <Image src='/img-3.jpg' alt="" layout='fill' />
               </div>
-            </Owl> */}
             </div>
-          </div>
           </div>
         </div>
     <Footer />
