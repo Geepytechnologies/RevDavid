@@ -81,16 +81,16 @@ export default function Index() {
          <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col h-[100%] " >
           <div className="flex flex-col">
             <label>Firstname</label>
-            <input type='text' {...register("firstname",{ required: true, maxLength: {value:20, message:'number is too short'} })} placeholder="Greg" className="border border-[#e8e8e8] rounded-sm"  />
+            <input type='text' {...register("firstname",{ required: {value: true, message:"Firstname is required"}, maxLength: {value:15, message:"Firstname shouldn't be more than 15 characters"} })} placeholder="Greg" className="border border-[#e8e8e8] rounded-sm"  />
             {errors.firstname && <p className='text-[red]'>{errors.firstname?.message}</p>}
           </div>
           <div className="flex flex-col">
             <label>Surname</label>
-            <input {...register("surname")} type='text' placeholder="Jill" className="border border-[#e8e8e8] rounded-sm" />
+            <input {...register("surname",{ required: {value: true, message:"Surname is required"}, maxLength: {value:15, message:"Surname shouldn't be more than 15 characters"} })} type='text' placeholder="Jill" className="border border-[#e8e8e8] rounded-sm" />
           </div>
           <div className="flex flex-col">
             <label>Email</label>
-            <input {...register("myemail")} type='email' placeholder="Gregjill@me.com" className="border border-[#e8e8e8] rounded-sm" />
+            <input {...register("myemail",{required: {value: true, message: "Please Input your Email"}})} type='email' placeholder="Gregjill@me.com" className="border border-[#e8e8e8] rounded-sm" />
             {errors.myemail && <p className='text-[red]'>{errors.myemail?.message}</p>}
           </div>
           <div className="flex flex-col">

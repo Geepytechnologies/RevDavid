@@ -69,6 +69,7 @@ export default function Index() {
   useEffect(()=>{
      LoadVideos();
      console.log(playlist)
+     console.log(process.env.NEXT_PUBLIC_API_KEY)
   },[])
   const VideoGallery = ()=> (
     <div className='mb-[50px]'>
