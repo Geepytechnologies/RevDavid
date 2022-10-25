@@ -164,7 +164,7 @@ export const getServerSideProps = async (context) =>{
             }
         }
     }
-    const res = await axios.get("/api/hello");
+    const res = await axios.get("http://localhost:3000/api/hello");
     return{
         props: {
             contacts: res.data
