@@ -82,8 +82,7 @@ export default function Index({contacts}){
         </Modal>
         <Header />
         <Navbar />
-        <p>{contacts.name}</p>
-        {/* <div>
+        <div>
             <div>
                 <p className="text-[30px] font-[600]">Admin Dashboard</p>
             </div>
@@ -149,7 +148,7 @@ export default function Index({contacts}){
                     </Table>
                 </TableContainer>
             </div>
-        </div> */}
+        </div>
         <Footer />
         </>
     )
@@ -165,7 +164,7 @@ export const getServerSideProps = async (context) =>{
             }
         }
     }
-    const res = await axios.get("https://revdavidakanwa.vercel.app/api/hello");
+    const res = await axios.get("http://localhost:3000/api/contacts");
     return{
         props: {
             contacts: res.data

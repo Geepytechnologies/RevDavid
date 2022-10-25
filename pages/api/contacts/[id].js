@@ -4,7 +4,7 @@ import Contacts from "../../../models/Contacts";
 export default async function handler(req, res) {
     const {method, query:{id}} = req;
 
-  dbConnect();
+  await dbConnect();
 
   if(method === "DELETE"){
     try{
