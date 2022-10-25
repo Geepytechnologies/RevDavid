@@ -43,7 +43,7 @@ export default function Index({contacts}){
     const handleDelete = async ()=>{
       try{
         setLoading(true);
-         const response = await axios.delete(`http://localhost:3000/api/contacts/${id}`)
+         const response = await axios.delete(`https://revdavidakanwa.vercel.app/api/contacts/${id}`)
          console.log(response.status)
          response && setLoading(false);
          setSuccess(true); 

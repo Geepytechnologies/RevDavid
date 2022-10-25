@@ -104,12 +104,16 @@ a {
   align-items: center;
   top: 0px;
 }
+button:disabled,button[disabled]:active,input[type="button"][disabled]{
+   background-color: green;
+   color: black;
+}
 .solidnav{
   background-color: #9b0000;
   background-image: url("data:image/svg+xml,%3Csvg width='6' height='6' viewBox='0 0 6 6' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23fcfaff' fill-opacity='0.4' fill-rule='evenodd'%3E%3Cpath d='M5 0h1L0 6V5zM6 5v1H5z'/%3E%3C/g%3E%3C/svg%3E");  color: white;
   position: sticky;
   width: 100%;
-  z-index: 999;
+  z-index: 777;
   height: 90px;
   border-bottom: 2px solid white;
   display: flex;
