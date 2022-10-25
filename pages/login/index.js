@@ -11,7 +11,7 @@ export default function Index() {
   const [error, setError] = useState(false);
   const handleSubmit = async ()=>{
     try{
-       const response = await axios.post("http://localhost:3000/api/login",{
+       const response = await axios.post("https://revdavidakanwa.vercel.app/api/login",{
         username, password
        })
        if(response.data == "successful"){

@@ -103,12 +103,12 @@ export default function Index({contacts}){
                         </Thead>
                         <Tbody>
                         {contacts.map((item,index)=>
-                        <Tr key={index}>
+                        <Tr className="mb-[4px]" key={index}>
                             <Td>{index + 1}</Td>
                             <Td>{item.name} {item.surname}</Td>
                             <Td>{item.email}</Td>
                             <Td>{item.phone}</Td>
-                            <Td>{item.prayerRequest}</Td>
+                            <Td className="max-w-[50px]">{item.prayerRequest}</Td>
                             <Td>{item.testimonies}</Td>
                             <Td onClick={()=>deleteitem(index)} className="rounded-xl" style={{backgroundColor: "#9b0000", color:"white", fontWeight: "600"}}>Delete</Td>
                         </Tr>)}
@@ -164,7 +164,7 @@ export const getServerSideProps = async (context) =>{
             }
         }
     }
-    const res = await axios.get("http://localhost:3000/api/contacts");
+    const res = await axios.get("https://revdavidakanwa.vercel.app/api/contacts");
     return{
         props: {
             contacts: res.data
