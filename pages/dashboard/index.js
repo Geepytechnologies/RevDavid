@@ -82,7 +82,8 @@ export default function Index({contacts}){
         </Modal>
         <Header />
         <Navbar />
-        <div>
+        <p>{contacts.name}</p>
+        {/* <div>
             <div>
                 <p className="text-[30px] font-[600]">Admin Dashboard</p>
             </div>
@@ -90,7 +91,7 @@ export default function Index({contacts}){
                 <p className="text-[20px]">Contacts</p>
                 <TableContainer>
                     <Table variant='simple'>
-                        {/* <TableCaption>Imperial to metric conversion factors</TableCaption> */}
+                        <TableCaption>Imperial to metric conversion factors</TableCaption>
                         <Thead>
                         <Tr>
                             <Th>ID</Th>
@@ -120,12 +121,12 @@ export default function Index({contacts}){
                 <p>Donations</p>
                 <TableContainer>
                     <Table variant='simple'>
-                        {/* <TableCaption>Imperial to metric conversion factors</TableCaption> */}
+                        <TableCaption>Imperial to metric conversion factors</TableCaption>
                         <Thead>
                         <Tr>
                             <Th style={{color: "red"}}>ID</Th>
                             <Th>NAME</Th>
-                            {/* <Th isNumeric>multiply by</Th> */}
+                            <Th isNumeric>multiply by</Th>
                         </Tr>
                         </Thead>
                         <Tbody>
@@ -148,7 +149,7 @@ export default function Index({contacts}){
                     </Table>
                 </TableContainer>
             </div>
-        </div>
+        </div> */}
         <Footer />
         </>
     )
@@ -164,7 +165,7 @@ export const getServerSideProps = async (context) =>{
             }
         }
     }
-    const res = await axios.get("http://localhost:3000/api/hello");
+    const res = await axios.get("https://revdavidakanwa.vercel.app/api/hello");
     return{
         props: {
             contacts: res.data
