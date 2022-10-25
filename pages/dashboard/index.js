@@ -164,7 +164,7 @@ export const getServerSideProps = async (context) =>{
             }
         }
     }
-    const res = await axios.get("http://localhost:3000/api/contacts");
+    const res = await axios.get("https://revdavidakanwa.vercel.app/api/contacts");
     return{
         props: {
             contacts: res.data
