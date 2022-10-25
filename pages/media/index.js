@@ -104,7 +104,7 @@ export default function Index() {
       <div>
         <p className='font-[600] text-[35px] text-center '>Books</p>
       </div>
-      {books.map(()=><div className='w-[100%] md:w-[70%] p-[10px] '>
+      {books.map((index)=><div key={index} className='w-[100%] md:w-[70%] p-[10px] '>
         <div className='flex bg-[#e8e8e8] p-[5px] mb-[10px] rounded-2xl  shadow-[0px_-35px_20px_-35px_rgba(0,0,0,0.2)] flex-row w-[100%] '>
           <div className='mr-[10px] rounded-l-2xl shadow-2xl w-[40%]'>
             <div className='relative rounded-l-2xl border-2 border-white w-[100%] h-[100%]'>
