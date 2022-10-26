@@ -51,7 +51,7 @@ export default function Index() {
   const theimage = useRef();
   const imgpic = false;
   const Imageheader = ()=> (
-    <div className=" bg-[url('/img-3.jpg')] h-[400px] w-[100%] bg-cover relative ">
+    <div className=" bg-[url('/media.jpg')] h-[400px] w-[100%] bg-cover relative ">
         <div className='absolute top-0 overlay'></div>
         <div className='w-[100%] absolute left-0 bottom-[50px] h-[80px]'>
           <div className='relative w-[50%] md:w-[30%] flex items-center h-[100%] pl-[20px] ml-[5px]'>
@@ -75,8 +75,8 @@ export default function Index() {
      console.log(playlist)
   },[]) */
   const VideoGallery = useCallback(()=> (
-    <div className='mb-[50px]'>
-      <p className='font-[600] text-[35px] text-center '>Videos</p>
+    <div className='mb-[50px] bg-[#051731]'>
+      <p className='font-[600] text-[35px] text-center text-white '>Videos</p>
       <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2 justify-items-center'>
         <div ref={video} className='w-[350px] h-[350px] relative '>
           {/* {loading ? <RotatingLines {...settings} className="absolute top-[50%] left-[50%] " /> : null } */}
@@ -92,8 +92,8 @@ export default function Index() {
   ))
 
   const ImageGallery = ()=> (
-    <div className='mb-[40px]'>
-     <p className='font-[600] text-[35px] text-center '>Image Gallery</p>
+    <div className='mb-[40px] bg-[#f7f7f7]'>
+     <p className='font-[600] text-[35px] text-center '>Gallery</p>
      <Slider />
     </div>
   )
@@ -131,19 +131,19 @@ export default function Index() {
       </div>
       <p className='mb-[5px]'>Listen to life changing and Inspirational Messages</p>
       <div className='grid gap-2 grid-cols-2 md:grid-cols-4 justify-between footer w-[90%] md:w-[80%]  p-[20px] '>
-        <div className='bg-[white] p-[5px] flex flex-col items-center justify-center rounded-lg h-[100%] w-[100%] relative'>
+        <div className='bg-[white] p-[5px] flex flex-col items-center justify-center rounded-lg w-[100%] relative'>
           <SiAudiomack className='text-[80px] text-[#faa405]  ' />
           <p>Audiomack</p>
         </div>
-        <div className='bg-[white] p-[5px] flex flex-col items-center justify-center rounded-lg h-[100%] w-[100%]  relative'>
+        <div className='bg-[white] p-[5px] flex flex-col items-center justify-center rounded-lg w-[100%]  relative'>
           <SiApplepodcasts className='text-[80px] text-[#9036cb]  ' />
           <p>Apple Podcasts</p>
         </div>        
-        <div className='bg-[white] p-[5px] flex flex-col items-center justify-center rounded-lg h-[100%] w-[100%]  relative'>
+        <div className='bg-[white] p-[5px] flex flex-col items-center justify-center rounded-lg w-[100%]  relative'>
           <GrSoundcloud className='text-[80px] text-[#f96e0e]' />
           <p>Soundcloud</p>
         </div>        
-        <div className='bg-[white] p-[5px] flex flex-col items-center justify-center rounded-lg h-[100%] w-[100%]  relative'>
+        <div className='bg-[white] p-[5px] flex flex-col items-center justify-center rounded-lg w-[100%]  relative'>
           <FaSpotify className='text-[80px] text-[#1dd960] ' />
           <p>Spotify</p>
         </div>

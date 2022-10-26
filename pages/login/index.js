@@ -31,11 +31,11 @@ export default function Index() {
             <div className='w-[80%] flex flex-col items-center justify-center'>
                 <div className='flex flex-col w-[100%] my-[10px]'>
                     <label className='font-[600]'>Username</label>
-                    <input type="text" onChange={(e)=>setUsername(e.target.value)} className="border border-[#e8e8e8] outline-0 rounded-sm" />
+                    <input type="text" onChange={(e)=>setUsername(e.target.value)} className="border border-[#e8e8e8] outline-0 py-[9px] rounded-sm" />
                 </div>
                 <div className='flex flex-col w-[100%]'>
                     <label className='font-[600]'>Password</label>
-                    <input type="password" onChange={(e)=>setPassword(e.target.value)} className="border border-[#e8e8e8] outline-0 rounded-sm" />
+                    <input type="password"  onChange={(e)=>setPassword(e.target.value)} className="border border-[#e8e8e8] py-[9px] outline-0 rounded-sm" />
                 </div>
                 <button onClick={handleSubmit}  className='bg-[#9b0000] rounded-sm w-[100%] my-[10px] p-[10px] text-[white] font-[700] '>LOGIN</button>
                 {error && <span className='text-[red] font-[600]'>Invalid Credentials</span>}

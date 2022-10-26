@@ -54,7 +54,7 @@ export default function Index() {
         <div className='w-[100%] absolute left-0 bottom-[50px] h-[80px]'>
           <div className='relative w-[50%] md:w-[30%] flex items-center h-[100%] pl-[20px] ml-[5px]'>
             <div className='animatedcon animate__animated  animate__fadeInLeft'></div>
-            <p className='mytext text-white font-[600] text-[30px] animate__animated  animate__fadeInLeft'>Contact</p>
+            <p className='mytext text-white font-[600] text-[30px] animate__animated  animate__fadeInLeft'>Get In Touch</p>
           </div>
         </div>
     </div>
@@ -70,16 +70,16 @@ export default function Index() {
     </div>
   )
    const Map = useCallback(()=>(
-    <div className='w-[90vw] mb-[10px] flex items-center justify-center '>
+    <div className='w-[100vw] py-[10px] mb-[10px] flex items-center justify-center '>
     <div className='w-[90%] h-[auto] flex items-center justify-center '>
-        <iframe className='w-[90%] h-[450px] border-2 border-[#e6e6e6] '
+        <iframe className='w-[100%] h-[450px] border-2 border-[#e6e6e6] '
           width="400"
           // height="450"
           // style="border:0"
           loading="lazy"
           allowFullScreen
           referrerPolicy="no-referrer-when-downgrade"
-  src = "https://www.google.com/maps/embed/v1/place?key=AIzaSyCfRPpHvF9GWWeNa4c5_LJiCGXHc190x00&q=Intimate+vessels+church,awka+nigeria"
+            src = "https://www.google.com/maps/embed/v1/place?key=AIzaSyCfRPpHvF9GWWeNa4c5_LJiCGXHc190x00&q=Intimate+vessels+church,awka+nigeria"
             >
         </iframe>
     </div>

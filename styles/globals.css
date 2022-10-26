@@ -55,7 +55,7 @@ a {
   animation-duration: 1s;
   animation-fill-mode: both;
   animation-delay: 0.5s;
-  animation-name: fadeInLeft;
+  animation-name: fadeInUp;
 }
 .active .line1{
   animation-duration: 1s;
@@ -79,8 +79,8 @@ a {
   /* height: auto; */
   background-attachment: fixed;
   background-position: center;
-  /* background-repeat: no-repeat; */
-  /* background-size: cover; */
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .overlay{
@@ -104,9 +104,8 @@ a {
   align-items: center;
   top: 0px;
 }
-button:disabled,button[disabled]:active,input[type="button"][disabled]{
-   background-color: green;
-   color: black;
+.paypal{
+  min-height: calc(100vh - 400px);
 }
 .solidnav{
   background-color: #9b0000;

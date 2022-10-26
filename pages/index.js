@@ -18,7 +18,7 @@ export default function Home() {
       <About />
       <Theman />
       <Mandate />
-      <Parallax />
+      {/* <Parallax /> */}
       <Footer />
        
     </div>
