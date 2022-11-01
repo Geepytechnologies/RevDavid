@@ -1,4 +1,4 @@
-import React,{useEffect,useState,useMemo, useCallback} from 'react'
+import React,{useEffect,useState,useMemo,useContext, useCallback} from 'react'
 import Header from '../../components/Header'
 import Navbar from '../../components/Navbar'
 import Footer from '../../components/Footer'
@@ -6,32 +6,22 @@ import { useForm } from "react-hook-form";
 import 'react-phone-number-input/style.css'
 import PhoneInput from 'react-phone-number-input'
 import { country } from '../../data/country';
-import { GridItem } from '@chakra-ui/react';
+import { GridItem, ModalContent } from '@chakra-ui/react';
 import Image from 'next/image';
 import axios from 'axios'
 import { AiFillCheckCircle, AiOutlineCheckCircle } from "react-icons/ai";
-import {
-  Modal,
-  ModalOverlay,
-  ModalContent,
-  ModalHeader,
-  ModalFooter,
-  ModalBody,
-  ModalCloseButton,
-  useDisclosure,
-  Button
-} from '@chakra-ui/react'
 import Seeds from '../../components/Seeds';
 import Passion5 from '../../components/Passion5';
 import Success from '../../components/Success';
 import { BsCheckLg } from 'react-icons/bs';
+import Modal from '../../components/Modal';
 
 
 
 
 
 export default function Index() {
-  const { isOpen, onOpen, onClose } = useDisclosure()
+  const modal =  React.createRef();
   const [loading, setLoading] = useState(false);
   const { register, handleSubmit, formState: {errors} } = useForm();
   const [selectedcountry,setSelectedcountry] = useState('Afghanistan')
@@ -52,7 +42,7 @@ export default function Index() {
     <div className=" bg-[url('/img-3.jpg')] h-[400px] w-[100%] bg-cover relative ">
         <div className='absolute top-0 overlay'></div>
         <div className='w-[100%] absolute left-0 bottom-[50px] h-[80px]'>
-          <div className='relative w-[50%] md:w-[30%] flex items-center h-[100%] pl-[20px] ml-[5px]'>
+          <div className='relative w-[70%] md:w-[30%] flex items-center h-[100%] pl-[20px] ml-[5px]'>
             <div className='animatedcon animate__animated  animate__fadeInLeft'></div>
             <p className='mytext text-white font-[600] text-[30px] animate__animated  animate__fadeInLeft'>Get In Touch</p>
           </div>
@@ -64,13 +54,13 @@ export default function Index() {
  
     
   const Makeadonation = ()=>(
-    <div className='flex flex-col md:flex-row w-[100vw] items-center justify-around mb-[70px]'>
+    <div className='flex flex-col md:flex-row w-[100%] items-center justify-around mb-[70px]'>
       <Seeds />
       <Passion5 />
     </div>
   )
    const Map = useCallback(()=>(
-    <div className='w-[100vw] py-[10px] mb-[10px] flex items-center justify-center '>
+    <div className='w-[95vw] py-[10px] mb-[10px] flex items-center justify-center '>
     <div className='w-[90%] h-[auto] flex items-center justify-center '>
         <iframe className='w-[100%] h-[450px] border-2 border-[#e6e6e6] '
           width="400"
@@ -85,10 +75,17 @@ export default function Index() {
     </div>
     </div>
    ),[])
-    
-  return (
-    
+   const openModal = ()=>{
+    modal.current.style.display = "flex";
+    document.body.style.overflow = "hidden";
+}
+  return ( 
+    <>
+
     <div className='relative'>
+    {/* <Modal /> */}
+    <button onClick={openModal}>show</button>
+    <Modal ref={modal} />
        <Header />
        <Navbar />
        <Contactheader />
@@ -149,6 +146,7 @@ export default function Index() {
        <Map />
        <Footer />
     </div>
+    </>
   )
 }
 

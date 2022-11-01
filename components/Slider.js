@@ -11,10 +11,6 @@ export default function Slider(){
     const [bottomimage, setBottomimage] = useState(0)
     const topimages = [
         {
-          id: 0,
-          url: '/go1.jpg'
-        },
-        {
           id: 1,
           url: '/go2.jpg'
         },

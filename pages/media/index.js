@@ -3,8 +3,8 @@ import Header from '../../components/Header'
 import Navbar from '../../components/Navbar'
 import Footer from '../../components/Footer'
 import Image from 'next/image'
-import { IoMdHeadset, IoMdHeartEmpty } from 'react-icons/io'
-import {BiSearchAlt2} from 'react-icons/bi'
+import { IoMdHeadset, IoMdHeartEmpty, IoMdMusicalNotes } from 'react-icons/io'
+import {HiOutlineMusicalNote} from 'react-icons/hi'
 import { RotatingLines } from 'react-loader-spinner'
 import Slider from '../../components/Slider'
 import { FaSpotify } from 'react-icons/fa'
@@ -51,8 +51,9 @@ export default function Index() {
   const theimage = useRef();
   const imgpic = false;
   const Imageheader = ()=> (
-    <div className=" bg-[url('/media.jpg')] h-[400px] w-[100%] bg-cover relative ">
-        <div className='absolute top-0 overlay'></div>
+    <div className=" h-[400px] w-[100%] relative ">
+        <Image src='/media.jpg' alt="RevDavid" placeholder='blur' blurDataURL='/media.jpg'  layout='fill' height='100%' width='100%' objectFit='cover' objectPosition="50% 50%"    />
+        {/* <div className='absolute top-0 overlay'></div> */}
         <div className='w-[100%] absolute left-0 bottom-[50px] h-[80px]'>
           <div className='relative w-[50%] md:w-[30%] flex items-center h-[100%] pl-[20px] ml-[5px]'>
             <div className='animatedcon animate__animated  animate__fadeInLeft'></div>
@@ -69,19 +70,26 @@ export default function Index() {
     .then((response)=>response.json())
     .then((data) => setPlaylist(data))
   }
-
+  
   /* useEffect(()=>{
      LoadVideos();
      console.log(playlist)
   },[]) */
   const VideoGallery = useCallback(()=> (
-    <div className='mb-[50px] bg-[#051731]'>
-      <p className='font-[600] text-[35px] text-center text-white '>Videos</p>
-      <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2 justify-items-center'>
-        <div ref={video} className='w-[350px] h-[350px] relative '>
+    <div className='py-[40px] bg-[#f8f8f8] relative'>
+      <IoMdMusicalNotes className='text-[50px] animate__animated animate__infinite	infinite animate__heartBeat text-[rgba(0,0,0,0.2)] shadow-sm absolute top-[0px] z-[1]' />
+      <IoMdMusicalNotes className='text-[50px] animate__animated animate__heartBeat animate__infinite	infinite  text-[rgba(0,0,0,0.2)] shadow-sm absolute bottom-[0px] z-[1] ' />
+      <IoMdMusicalNotes className='text-[50px] animate__animated animate__heartBeat animate__infinite	infinite text-[rgba(0,0,0,0.2)] shadow-sm absolute top-[50%] left-[50%] z-[1]' />
+      <IoMdMusicalNotes className='text-[50px] animate__animated animate__heartBeat animate__infinite	infinite text-[rgba(0,0,0,0.2)] shadow-sm absolute right-[20px] top-0 z-[1]' />
+      <IoMdMusicalNotes className='text-[50px] animate__animated animate__heartBeat animate__infinite	infinite text-[rgba(0,0,0,0.2)] shadow-sm absolute right-[20px] bottom-0 z-[1]' />
+      {/* <p className='font-[600] text-[35px] text-center text-white '>Videos</p> */}
+      <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 z-[10]  gap-2 justify-items-center'>
+        <div ref={video} className='w-[350px] h-[350px] border border-white shadow-2xl relative '>
           {/* {loading ? <RotatingLines {...settings} className="absolute top-[50%] left-[50%] " /> : null } */}
+          {/* src="https://www.youtube.com/embed/tgbNymZ7vqY"> */}
+
          <iframe  width="100%" height="100%"
-            src="https://www.youtube.com/embed/tgbNymZ7vqY">
+            src="https://www.youtube.com/embed/W8UsgDOk8Aw">
          </iframe>
           {/* <ReactPlayer onReady={()=>setLoading(false)} controls pip={true} url='http://www.youtube.com/watch?v=W8UsgDOk8Aw' height='100%' width='100%' className='absolute top-0' /> */}
           {/* <p>Title</p> */}
@@ -93,19 +101,19 @@ export default function Index() {
 
   const ImageGallery = ()=> (
     <div className='mb-[40px] bg-[#f7f7f7]'>
-     <p className='font-[600] text-[35px] text-center '>Gallery</p>
+     <p className='font-[600] font-tang text-[35px] text-center '>Image Gallery</p>
      <Slider />
     </div>
   )
   const Books = ()=>{
     const books = [1,2,3];
   return(
-    <div>
+    <div className='flex items-center justify-center flex-col'>
       <div>
-        <p className='font-[600] text-[35px] text-center '>Books</p>
+        <p className='font-[600] font-tang text-[35px] text-center '>Books</p>
       </div>
-      {books.map((index)=><div key={index} className='w-[100%] md:w-[70%] p-[10px] '>
-        <div className='flex bg-[#e8e8e8] p-[5px] mb-[10px] rounded-2xl  shadow-[0px_-35px_20px_-35px_rgba(0,0,0,0.2)] flex-row w-[100%] '>
+      {books.map((index)=><div key={index} className='w-[100%] flex flex-col items-center justify-center md:w-[70%] p-[10px] '>
+        <div className='flex bg-[#e8e8e8] p-[5px] mb-[10px] rounded-2xl  shadow-[0px_-35px_20px_-35px_rgba(0,0,0,0.2)] flex-row w-[100%] md:w-[70%] '>
           <div className='mr-[10px] rounded-l-2xl shadow-2xl w-[40%]'>
             <div className='relative rounded-l-2xl border-2 border-white w-[100%] h-[100%]'>
                <Image src='/bgg2.jpg' alt='' width="100%" height="100%" layout="responsive" objectFit='cover' objectPosition="50% 50%" className='rounded-l-2xl' />
@@ -127,7 +135,7 @@ export default function Index() {
     <div className='flex flex-col items-center mb-[20px]'>
       <div className='flex flex-row items-center justify-center '>
          <IoMdHeadset className='mr-[8px] text-[40px]' />
-         <p className='font-[600] text-[35px] text-center '>Audio Streaming</p>
+         <p className='font-[700] font-tang text-[35px] text-center '>Audio Streaming</p>
       </div>
       <p className='mb-[5px]'>Listen to life changing and Inspirational Messages</p>
       <div className='grid gap-2 grid-cols-2 md:grid-cols-4 justify-between footer w-[90%] md:w-[80%]  p-[20px] '>

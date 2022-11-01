@@ -28,21 +28,27 @@ import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
 import Router from "next/router";
 import { AiFillCheckCircle } from "react-icons/ai";
+import VideoModal from "../../components/VideoModal";
 
 export default function Index({contacts,books,images,videos}){
+    const modal =  React.createRef();
     const { isOpen, onOpen, onClose } = useDisclosure()
     const [deleteIndex, setDeleteIndex] = useState();
     const [loading,setLoading] = useState(false);
     const [success, setSuccess] = useState(false);
     const contactid = contacts[deleteIndex]?._id;
+    const openModal = ()=>{
+        modal.current.style.display = "flex";
+        document.body.style.overflow = "hidden";
+    }
     const deleteitem = (index)=>{
-       setDeleteIndex(index);
-       onOpen();
+    //    setDeleteIndex(index);
+       openModal();
     }
     const handleDelete = async ()=>{
       try{
         setLoading(true);
-         const response = await axios.delete(`https://revdavidakanwa.vercel.app/api/contacts/${contactid}`)
+         const response = await axios.delete(`${process.env.DOMAIN}/api/contacts/${contactid}`)
          console.log(response.status)
          response && setLoading(false);
          setSuccess(true); 
@@ -51,35 +57,13 @@ export default function Index({contacts,books,images,videos}){
         console.log(err)
       }
     }
+   
     return(
-        <>
+        <div className="">
         {/* <Button onClick={onOpen}>Give</Button> */}
-
-       <Modal closeOnOverlayClick={false} isOpen={isOpen} onClose={onClose}>
-            <ModalOverlay />
-            <ModalContent>
-                {/* <ModalHeader>Modal Title</ModalHeader> */}
-                {!loading && <ModalCloseButton />}
-                <ModalBody>
-                  {loading === true ?
-                  <div className="w-[100%] flex flex-col items-center justify-center">
-                   <Spinner thickness='4px'
-                   speed='0.65s'
-                   emptyColor='gray.200' size="xl" color='red.500' /><p className="mt-[4px] font-[600]">Deleting....</p></div> :
-                    !success ? <div>
-                        <p>Proceed with Deleting contact?</p>
-                    </div> : <div className="flex flex-col items-center text-[50px]"><AiFillCheckCircle className="text-[green]" /><p className="font-[600] text-[20px]">success</p></div>
-                   }
-                </ModalBody>
-                <ModalFooter>
-                    {loading === false || success === false ? <Button colorScheme='blue' mr={3} onClick={onClose}>
-                        No
-                    </Button>: null}
-                    {loading === false || success === false ? <Button onClick={handleDelete} variant='ghost'>Yes</Button> : null}
-                </ModalFooter>
-            </ModalContent>
-        </Modal>
+    
         <Header />
+        <VideoModal ref={modal} />
         <Navbar />
         <div>
             <div>
@@ -109,7 +93,7 @@ export default function Index({contacts,books,images,videos}){
                             <Td>{item.phone}</Td>
                             <Td className="max-w-[50px]">{item.prayerRequest}</Td>
                             <Td>{item.testimonies}</Td>
-                            <Td onClick={()=>deleteitem(index)} className="rounded-xl" style={{backgroundColor: "#9b0000", color:"white", fontWeight: "600"}}>Delete</Td>
+                            <Td onClick={openModal} className="rounded-xl" style={{backgroundColor: "#9b0000", color:"white", fontWeight: "600"}}>Delete</Td>
                         </Tr>)}
                         </Tbody>
                     </Table>
@@ -162,8 +146,8 @@ export default function Index({contacts,books,images,videos}){
                             <Td>{item.description}</Td>
                             <Td>{item.author}</Td>
                             <Td>{item.bookcoverurl}</Td>
-                            <Td onClick={()=>additem(index)} className="rounded-xl" style={{backgroundColor: "#38a169", color:"white", fontWeight: "600"}}>ADD</Td>
-                            <Td onClick={()=>deleteitem(index)} className="rounded-xl" style={{backgroundColor: "#9b0000", color:"white", fontWeight: "600"}}>DELETE</Td>
+                            <Td><button onClick={()=>additem(index)} className="rounded-sm" style={{backgroundColor: "#38a169", color:"white", fontWeight: "600", padding:'10px'}}>ADD</button></Td>
+                            <Td onClick={()=>openModal} className="rounded-sm" style={{backgroundColor: "#9b0000", color:"white", fontWeight: "600", padding:'10px'}}>DELETE</Td>
                         </Tr>)}
                         </Tbody>
                     </Table>
@@ -262,7 +246,7 @@ export default function Index({contacts,books,images,videos}){
             </div>
         </div>
         <Footer />
-        </>
+        </div>
     )
 }
 
@@ -276,10 +260,10 @@ export const getServerSideProps = async (context) =>{
             }
         }
     }
-    const mycontacts = await axios.get("https://revdavidakanwa.vercel.app/api/contacts");
-    const mybooks = await axios.get("https://revdavidakanwa.vercel.app/api/books");
-    const myimages = await axios.get("https://revdavidakanwa.vercel.app/api/videos");
-    const myvideos = await axios.get("https://revdavidakanwa.vercel.app/api/images");
+    const mycontacts = await axios.get(`${process.env.DOMAIN}/api/contacts`);
+    const mybooks = await axios.get(`${process.env.DOMAIN}/api/books`);
+    const myimages = await axios.get(`${process.env.DOMAIN}/api/videos`);
+    const myvideos = await axios.get(`${process.env.DOMAIN}/api/images`);
     return{
         props: {
             contacts: mycontacts.data,
