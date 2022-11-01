@@ -27,7 +27,7 @@ import Header from "../../components/Header";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
 import Router from "next/router";
-import { AiFillCheckCircle } from "react-icons/ai;
+import { AiFillCheckCircle } from "react-icons/ai";
 
 export default function Index({contacts,books,images,videos}){
     const { isOpen, onOpen, onClose } = useDisclosure()
