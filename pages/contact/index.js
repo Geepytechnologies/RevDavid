@@ -14,14 +14,12 @@ import Seeds from '../../components/Seeds';
 import Passion5 from '../../components/Passion5';
 import Success from '../../components/Success';
 import { BsCheckLg } from 'react-icons/bs';
-import Modal from '../../components/Modal';
 
 
 
 
 
 export default function Index() {
-  const modal =  React.createRef();
   const [loading, setLoading] = useState(false);
   const { register, handleSubmit, formState: {errors} } = useForm();
   const [selectedcountry,setSelectedcountry] = useState('Afghanistan')
@@ -83,9 +81,6 @@ export default function Index() {
     <>
 
     <div className='relative'>
-    {/* <Modal /> */}
-    <button onClick={openModal}>show</button>
-    <Modal ref={modal} />
        <Header />
        <Navbar />
        <Contactheader />
