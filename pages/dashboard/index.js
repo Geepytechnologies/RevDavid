@@ -27,23 +27,16 @@ import Header from "../../components/Header";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
 import Router from "next/router";
-import { AiFillCheckCircle } from "react-icons/ai";
-import VideoModal from "../../components/VideoModal";
+import { AiFillCheckCircle } from "react-icons/ai;
 
 export default function Index({contacts,books,images,videos}){
-    const modal =  React.createRef();
     const { isOpen, onOpen, onClose } = useDisclosure()
     const [deleteIndex, setDeleteIndex] = useState();
     const [loading,setLoading] = useState(false);
     const [success, setSuccess] = useState(false);
     const contactid = contacts[deleteIndex]?._id;
-    const openModal = ()=>{
-        modal.current.style.display = "flex";
-        document.body.style.overflow = "hidden";
-    }
     const deleteitem = (index)=>{
     //    setDeleteIndex(index);
-       openModal();
     }
     const handleDelete = async ()=>{
       try{
@@ -63,7 +56,6 @@ export default function Index({contacts,books,images,videos}){
         {/* <Button onClick={onOpen}>Give</Button> */}
     
         <Header />
-        <VideoModal ref={modal} />
         <Navbar />
         <div>
             <div>
@@ -93,7 +85,7 @@ export default function Index({contacts,books,images,videos}){
                             <Td>{item.phone}</Td>
                             <Td className="max-w-[50px]">{item.prayerRequest}</Td>
                             <Td>{item.testimonies}</Td>
-                            <Td onClick={openModal} className="rounded-xl" style={{backgroundColor: "#9b0000", color:"white", fontWeight: "600"}}>Delete</Td>
+                            <Td className="rounded-xl" style={{backgroundColor: "#9b0000", color:"white", fontWeight: "600"}}>Delete</Td>
                         </Tr>)}
                         </Tbody>
                     </Table>
@@ -147,7 +139,7 @@ export default function Index({contacts,books,images,videos}){
                             <Td>{item.author}</Td>
                             <Td>{item.bookcoverurl}</Td>
                             <Td><button onClick={()=>additem(index)} className="rounded-sm" style={{backgroundColor: "#38a169", color:"white", fontWeight: "600", padding:'10px'}}>ADD</button></Td>
-                            <Td onClick={()=>openModal} className="rounded-sm" style={{backgroundColor: "#9b0000", color:"white", fontWeight: "600", padding:'10px'}}>DELETE</Td>
+                            <Td className="rounded-sm" style={{backgroundColor: "#9b0000", color:"white", fontWeight: "600", padding:'10px'}}>DELETE</Td>
                         </Tr>)}
                         </Tbody>
                     </Table>
